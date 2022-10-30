@@ -11,6 +11,6 @@ public class BookInfo {
     private String title;
     private String link;
     private String imageSrc;
-    private String description;
+    private String author;
 }
 

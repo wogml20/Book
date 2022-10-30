@@ -27,13 +27,13 @@
         </div>
     </form>
 
-    <div class="card-deck">
-        <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4" th:each="info:${bookInfos}">
+    <div class="card-group">
+        <div class="col-xl-2 col-lg-4 col-md-6 col-12 mb-4" th:each="info:${bookInfos}">
             <div class="card mt-3 h-100">
                 <img class="card-img-top" th:src="${info.imageSrc}" alt="Card image cap">
                 <div class="card-body">
                     <h6 class="card-title" th:text="${info.title}"></h6>
-                    <p class="card-text text-truncate" th:text="${info.description}"></p>
+                    <p class="card-text" th:text="'저자   '+ ${info.author}"></p>
                 </div>
                 <div class="card-footer text-center">
                     <small class="text-muted"><a th:href="@{${info.link}}">바로 가기</a></small>

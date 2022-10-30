@@ -80,7 +80,7 @@ public class Searchcontroller {
 //            log.info(items.getJSONObject(i).get("title"));
 //            log.info("link: " + items.getJSONObject(i).get("link"));
 //            log.info("img src: " +items.getJSONObject(i).get("image"));
-            bookInfos.add(new BookInfo(i+1, (String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("description")));
+            bookInfos.add(new BookInfo(i+1, (String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author")));
         }
         model.addAttribute("bookInfos", bookInfos);
 
