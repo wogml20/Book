@@ -2,7 +2,7 @@ package com.book.controller;
 
 
 
-import com.mysql.cj.xdevapi.JsonArray;
+import com.book.dto.BookTitle;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
@@ -25,6 +25,7 @@ import java.net.URI;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
+import java.util.ArrayList;
 
 
 @RequiredArgsConstructor
@@ -32,42 +33,6 @@ import java.text.ParseException;
 @Log4j2
 @RequestMapping("/book")
 public class Searchcontroller {
-
-//    @RequestParam String query,
-//    @GetMapping("/search")
-//    public String searchBook(@RequestParam String query,Model model) throws ParseException {
-//
-//        ByteBuffer buffer = StandardCharsets.UTF_8.encode(query);
-//        String encode = StandardCharsets.UTF_8.decode(buffer).toString();
-//
-//        URI uri = UriComponentsBuilder
-//                .fromUriString("https://openapi.naver.com")
-//                .path("/v1/search/book.json")
-//                .queryParam("query",encode)
-//                .queryParam("display",10)
-//                .encode()
-//                .build()
-//                .toUri();
-//
-//        RestTemplate restTemplate = new RestTemplate();
-//
-//        RequestEntity<Void> req = RequestEntity
-//                .get(uri)
-//                .header("X-Naver-Client-Id", "zwvvcSwJFxCgtvbJTnvm")
-//                .header("X-Naver-Client-Secret","qqkxIC0KAZ")
-//                .build();
-//
-//        ResponseEntity<String> result = restTemplate.exchange(req, String.class);
-//        String r = result.getBody();
-//
-//        JSONParser parser = new JSONParser();
-//        JSONArray values = (JSONArray)parser.parse(r);
-//        JSONObject value = (JSONObject)values.get(0);
-//        System.out.println((String)value.get("lastBuildDate"));
-//
-//        model.addAttribute("result", r);
-//        return "api/searchBook";
-//    }
 
     @GetMapping("/search")
     public String Book() {
@@ -108,10 +73,13 @@ public class Searchcontroller {
         JSONArray items = value.getJSONArray("items");
         log.info(items);
 
+        ArrayList<BookTitle> titles = new ArrayList<>();
+
         for(int i = 0; i<items.length(); i++) {
             log.info(items.getJSONObject(i).get("title"));
+            titles.add(new BookTitle(i, (String) items.getJSONObject(i).get("title")));
         }
-        model.addAttribute("result", items);
+        model.addAttribute("titles", titles);
         return "api/searchBook";
     }
 
