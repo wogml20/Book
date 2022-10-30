@@ -6,8 +6,11 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class BookTitle {
-
+public class BookInfo {
     private int id;
     private String title;
+    private String link;
+    private String imageSrc;
+    private String description;
 }
+

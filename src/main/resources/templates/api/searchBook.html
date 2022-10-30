@@ -3,23 +3,43 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/layout1}">
 
+
 <th:block layout:fragment="script">
     <script th:inline="javascript">
 
     </script>
 </th:block>
-<div layout:fragment="content">
-    <h1>도서 검색</h1>
 
+
+<div layout:fragment="content">
     <form action="/book/search" method="post">
-        <input type="text" placeholder="책 제목을 입력하세요." name="title">
-        <button type="submit" class="btn btn-primary">검색</button>
+        <div class="jumbotron">
+            <h1 class="display-4 text-center">도서 검색</h1>
+            <hr class="my-4">
+
+            <div class="input-group mb-3 text-center">
+                <input type="text" class="form-control" placeholder="책 제목을 입력하세요." aria-describedby="button-addon2" name="title">
+
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="submit" id="button-addon2">검색</button>
+                </div>
+            </div>
+        </div>
     </form>
 
-    <table>
-        <tr th:each="t:${titles}">
-            <td th:text="${t.id}"></td>
-            <td th:text="${t.title}"></td>
-        </tr>
-    </table>
+    <div class="card-deck">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12 mb-4" th:each="info:${bookInfos}">
+            <div class="card mt-3 h-100">
+                <img class="card-img-top" th:src="${info.imageSrc}" alt="Card image cap">
+                <div class="card-body">
+                    <h6 class="card-title" th:text="${info.title}"></h6>
+                    <p class="card-text text-truncate" th:text="${info.description}"></p>
+                </div>
+                <div class="card-footer text-center">
+                    <small class="text-muted"><a th:href="@{${info.link}}">바로 가기</a></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

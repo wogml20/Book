@@ -2,7 +2,7 @@ package com.book.controller;
 
 
 
-import com.book.dto.BookTitle;
+import com.book.dto.BookInfo;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 
@@ -73,13 +73,17 @@ public class Searchcontroller {
         JSONArray items = value.getJSONArray("items");
         log.info(items);
 
-        ArrayList<BookTitle> titles = new ArrayList<>();
+        ArrayList<BookInfo> bookInfos = new ArrayList<>();
+
 
         for(int i = 0; i<items.length(); i++) {
-            log.info(items.getJSONObject(i).get("title"));
-            titles.add(new BookTitle(i, (String) items.getJSONObject(i).get("title")));
+//            log.info(items.getJSONObject(i).get("title"));
+//            log.info("link: " + items.getJSONObject(i).get("link"));
+//            log.info("img src: " +items.getJSONObject(i).get("image"));
+            bookInfos.add(new BookInfo(i+1, (String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("description")));
         }
-        model.addAttribute("titles", titles);
+        model.addAttribute("bookInfos", bookInfos);
+
         return "api/searchBook";
     }
 
