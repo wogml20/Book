@@ -82,4 +82,10 @@ public class Searchcontroller {
         return "api/searchBook";
     }
 
+
+    @GetMapping("/cart")
+    public String BookCart() {
+        return "api/cart";
+    }
+
 }
