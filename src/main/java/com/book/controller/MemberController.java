@@ -38,7 +38,6 @@ public class MemberController {
             return "member/memberForm";
         }
         try {
-            log.info("권한 설정 ======= "+ memberFormDto.getRole());
             Member member = Member.createMember(memberFormDto, passwordEncoder);
             memberService.saveMember(member);
         } catch (IllegalStateException e) {
