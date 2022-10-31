@@ -8,8 +8,6 @@ import lombok.extern.log4j.Log4j2;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
-//import org.json.JSONParser;
-//import org.json.ParseException;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -77,9 +75,6 @@ public class Searchcontroller {
 
 
         for(int i = 0; i<items.length(); i++) {
-//            log.info(items.getJSONObject(i).get("title"));
-//            log.info("link: " + items.getJSONObject(i).get("link"));
-//            log.info("img src: " +items.getJSONObject(i).get("image"));
             bookInfos.add(new BookInfo(i+1, (String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author")));
         }
         model.addAttribute("bookInfos", bookInfos);
