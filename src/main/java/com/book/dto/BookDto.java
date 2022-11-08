@@ -17,5 +17,6 @@ public class BookDto {
     private Integer stockNumber;        //재고
     private String publisher;       // 출판사
     private String description;     //상세 설명
+
 }
 

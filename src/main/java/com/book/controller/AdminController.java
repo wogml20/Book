@@ -4,6 +4,7 @@ import com.book.dto.BookDto;
 import com.book.dto.MemberFormDto;
 import com.book.entity.Book;
 import com.book.entity.Member;
+import com.book.repository.BookRepository;
 import com.book.service.BookService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
@@ -25,6 +26,8 @@ import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Objects;
 
 
 @Controller
@@ -36,6 +39,9 @@ public class AdminController {
     @Autowired
     BookService bookService;
 
+    @Autowired
+    BookRepository bookRepository;
+
     ArrayList<BookDto> bookInfos = new ArrayList<>();
 
     @GetMapping(value = "/item/new")
@@ -46,6 +52,7 @@ public class AdminController {
     @PostMapping("/item/new")
     public String searchBook(HttpServletRequest httpServletRequest, Model model) throws ParseException {
 
+        bookInfos.clear();
         String query = httpServletRequest.getParameter("title");
         log.info("title_query ============= " + query);
 
@@ -92,38 +99,73 @@ public class AdminController {
 
 //    @RequestMapping(value = "id",method= RequestMethod.POST) int id
 //    , @RequestParam("id") int id, @RequestParam("stockNumber") int stockNumber
+//    @PostMapping("/item/add")
+//    public String bookAdd(HttpServletRequest httpServletRequest, @RequestParam("status.index + 1") int id, @RequestParam("stockNumber") int stockNumber, Model model) throws Exception {
+//
+//        Book book;
+////        String query_stock_number = httpServletRequest.getParameter("stockNumber");
+////        String query_id = httpServletRequest.getParameter("id");
+//
+//        log.info("수량 선택 ============= " + stockNumber);
+//        log.info("선택한 id ============= " + id);
+//
+////
+////        Integer stockNumber = Integer.parseInt(query_stock_number);
+////        int id;
+//
+////        if(query_id == null || query_id.isEmpty()) {
+////            id = 1;
+////        }else {
+////            id = Integer.parseInt(query_id);
+////        }
+////        id = 1;
+//
+//        try {
+//            book = Book.createBook(stockNumber, bookInfos.get(id));
+//            bookService.saveBook(book);
+//        } catch (IllegalStateException e) {
+//            model.addAttribute("errorMessage", e.getMessage());
+//            return "item/itemAdd";
+//        }
+//
+//        log.info(book);
+//        model.addAttribute("bookDtos", bookInfos.get(id));
+//
+//        return "item/itemAdd";
+//    }
+
     @PostMapping("/item/add")
     public String bookAdd(HttpServletRequest httpServletRequest, Model model) throws Exception {
 
-        Book book;
         String query_stock_number = httpServletRequest.getParameter("stockNumber");
-        String query_id = httpServletRequest.getParameter("id");
+        String query_id = httpServletRequest.getParameter("index");
 
         log.info("수량 선택 ============= " + query_stock_number);
         log.info("선택한 id ============= " + query_id);
 
-
+        Integer value = Integer.parseInt(query_id);
         Integer stockNumber = Integer.parseInt(query_stock_number);
-        int id;
 
-//        if(query_id == null || query_id.isEmpty()) {
-//            id = 1;
-//        }else {
-//            id = Integer.parseInt(query_id);
-//        }
-        id = 1;
+        Book book;
+
+//        bookInfos.set(6, value);
 
         try {
-            book = Book.createBook(stockNumber, bookInfos.get(id));
+            book = Book.createBook(stockNumber, bookInfos.get(value));
             bookService.saveBook(book);
         } catch (IllegalStateException e) {
             model.addAttribute("errorMessage", e.getMessage());
             return "item/itemAdd";
         }
 
-        model.addAttribute("bookDtos", bookInfos.get(id));
+        log.info(book);
+        log.info("====================bookrepository====================");
+        log.info(bookRepository.findAll());
 
+//        ArrayList<Arrays> bookAdd = new ArrayList();
+//        bookAdd.add((Arrays) bookRepository.findAll());
+
+        model.addAttribute("bookDtos", bookRepository.findAll());
         return "item/itemAdd";
     }
-
 }

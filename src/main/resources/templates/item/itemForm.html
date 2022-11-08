@@ -28,25 +28,52 @@
   </form>
 
 
+
   <form action="/admin/item/add" method="post">
-  <div class="card-group">
-    <div class="col-xl-2 col-lg-4 col-md-6 col-12 mb-4" th:each="info, status:${bookInfos}">
-      <div class="card mt-3 h-100">
-        <img class="card-img-top" th:src="${info.imageSrc}" alt="Card image cap">
-        <div class="card-body">
-          <h6 class="card-title" th:text="${info.title}"></h6>
-          <p class="card-text" th:text="'저자   '+ ${info.author}"></p>
-        </div>
-<!--        <div class="card-footer text-center">-->
-<!--          <small class="text-muted"><a th:href="@{${info.link}}">장바구니에 담기</a></small>-->
+
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">이미지</th>
+        <th scope="col">제목</th>
+        <th scope="col">저자</th>
+        <th scope="col">출판사</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="info, status:${bookInfos}">
+        <th><img th:src="${info.imageSrc}" style="width: 65px"; height="95px"></th>
+        <td th:text="${info.title}"></td>
+        <td th:text="${info.author}"></td>
+        <td th:text="${info.publisher}"></td>
+        <td>
+          <button type="button" class="text-center btn btn-primary addBtn" data-toggle="modal" data-target="#exampleModal">
+            <input type="hidden" class="hiddenValue">
+            <small class="text-white">추가하기</small>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+<!--  <div class="card-group">-->
+<!--    <div class="col-xl-2 col-lg-4 col-md-6 col-12 mb-4" th:each="info, status:${bookInfos}">-->
+<!--      <div class="card mt-3 h-100 cardList">-->
+<!--        <img class="card-img-top" th:src="${info.imageSrc}" alt="Card image cap">-->
+<!--        <div class="card-body">-->
+<!--          <h6 class="card-title" th:text="${info.title}"></h6>-->
+<!--          <p class="card-text" th:text="'저자   '+ ${info.author}"></p>-->
 <!--        </div>-->
-        <button type="button" class="text-center btn btn-primary" data-toggle="modal" data-target="#exampleModal" th:text="${status.index + 1}">
-          <input type="hidden" th:value="${status.index + 1}" name="id">
-          <small class="text-white">추가하기</small>
-        </button>
-      </div>
-    </div>
-  </div>
+<!--&lt;!&ndash;        <div class="card-footer text-center">&ndash;&gt;-->
+<!--&lt;!&ndash;          <small class="text-muted"><a th:href="@{${info.link}}">장바구니에 담기</a></small>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+<!--        <button type="button" class="text-center btn btn-primary" data-toggle="modal" data-target="#exampleModal">-->
+<!--          <small class="text-white">추가하기</small>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
 
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -72,4 +99,32 @@
   </div>
   </form>
 
+  <script>
+    // const buttons = document.querySelectorAll(".cardList > button");
+
+    // buttons.forEach(el => {
+    //   el.onclick = (e) => {
+    //     const nodes = [...e.target.parentElement.children];
+    //
+    //     console.log(e.target.parentElement, nodes);
+    //
+    //     const index = nodes.indexOf(e.target);
+    //
+    //     alert(`선택한 박스의 index는 ${index}입니다.`);
+    //   }
+    // });
+
+    const buttons = document.querySelectorAll(".addBtn");
+
+
+    buttons.forEach((el, index) => {
+      el.onclick = () => {
+        // el.setAttribute("name", "index");
+        document.querySelector(".hiddenValue").setAttribute("name", "index");
+        document.querySelector(".hiddenValue").setAttribute("value", index);
+        // el.setAttribute("value", index);
+        console.log(index);
+      }
+    });
+  </script>
 </div>
