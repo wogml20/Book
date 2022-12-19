@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+
+<th:block layout:fragment="script">
+    <script th:inline="javascript">
+
+    </script>
+</th:block>
+
+<div layout:fragment="content">
+    <div class="jumbotron">
+        <h1 class="display-4 text-center">장바구니</h1>
+    </div>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col"></th>
+            <th scope="col">상품정보</th>
+            <th scope="col">수량</th>
+            <th scope="col">상품금액</th>
+            <th scope="col">주문</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="cartdto:${cartDtos}">
+            <th><img th:src="${cartdto.imageSrc}" style="width: 65px"; height="95px"></th>
+            <td th:text="${cartdto.title}"></td>
+            <td><input type="number" th:value="${cartdto.stockNumber}"></td>
+            <td th:text="${cartdto.discount}"></td>
+            <td><button class="btn btn-primary">주문하기</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</html>

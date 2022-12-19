@@ -1,9 +1,7 @@
 package com.book.controller;
 
 import com.book.dto.BookDto;
-import com.book.dto.MemberFormDto;
 import com.book.entity.Book;
-import com.book.entity.Member;
 import com.book.repository.BookRepository;
 import com.book.service.BookService;
 import lombok.RequiredArgsConstructor;
@@ -15,19 +13,15 @@ import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
-
 import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Objects;
 
 
 @Controller
@@ -89,50 +83,10 @@ public class AdminController {
             bookInfos.add(new BookDto((String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author"),(String) items.getJSONObject(i).get("isbn"),(String) items.getJSONObject(i).get("discount"),Integer.parseInt(String.valueOf(100)), (String) items.getJSONObject(i).get("publisher"),(String) items.getJSONObject(i).get("description")));
         }
 
-//        log.info(bookInfos.get(0).getId());
-
         model.addAttribute("bookInfos", bookInfos);
 
         return "item/itemForm";
     }
-
-
-//    @RequestMapping(value = "id",method= RequestMethod.POST) int id
-//    , @RequestParam("id") int id, @RequestParam("stockNumber") int stockNumber
-//    @PostMapping("/item/add")
-//    public String bookAdd(HttpServletRequest httpServletRequest, @RequestParam("status.index + 1") int id, @RequestParam("stockNumber") int stockNumber, Model model) throws Exception {
-//
-//        Book book;
-////        String query_stock_number = httpServletRequest.getParameter("stockNumber");
-////        String query_id = httpServletRequest.getParameter("id");
-//
-//        log.info("수량 선택 ============= " + stockNumber);
-//        log.info("선택한 id ============= " + id);
-//
-////
-////        Integer stockNumber = Integer.parseInt(query_stock_number);
-////        int id;
-//
-////        if(query_id == null || query_id.isEmpty()) {
-////            id = 1;
-////        }else {
-////            id = Integer.parseInt(query_id);
-////        }
-////        id = 1;
-//
-//        try {
-//            book = Book.createBook(stockNumber, bookInfos.get(id));
-//            bookService.saveBook(book);
-//        } catch (IllegalStateException e) {
-//            model.addAttribute("errorMessage", e.getMessage());
-//            return "item/itemAdd";
-//        }
-//
-//        log.info(book);
-//        model.addAttribute("bookDtos", bookInfos.get(id));
-//
-//        return "item/itemAdd";
-//    }
 
     @PostMapping("/item/add")
     public String bookAdd(HttpServletRequest httpServletRequest, Model model) throws Exception {
@@ -148,7 +102,6 @@ public class AdminController {
 
         Book book;
 
-//        bookInfos.set(6, value);
 
         try {
             book = Book.createBook(stockNumber, bookInfos.get(value));
@@ -162,9 +115,14 @@ public class AdminController {
         log.info("====================bookrepository====================");
         log.info(bookRepository.findAll());
 
-//        ArrayList<Arrays> bookAdd = new ArrayList();
-//        bookAdd.add((Arrays) bookRepository.findAll());
 
+        model.addAttribute("bookDtos", bookRepository.findAll());
+        return "item/itemAdd";
+    }
+
+
+    @GetMapping("/item/add")
+    public String bootManage(Model model) throws Exception {
         model.addAttribute("bookDtos", bookRepository.findAll());
         return "item/itemAdd";
     }

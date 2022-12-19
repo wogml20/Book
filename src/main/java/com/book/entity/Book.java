@@ -1,6 +1,7 @@
 package com.book.entity;
 
 import com.book.dto.BookDto;
+import com.book.dto.CartDto;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -19,27 +20,7 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-//    @Column(nullable = false, length = 50)
-//    private String bookNm;
-//
-//    @Column(name = "price", nullable = false)
-//    private int price;
-//
-//    @Column(nullable = false)
-//    private int stockNumber;
-//
-//    @Lob
-//    @Column(nullable = false)
-//    private String bookDetail;
-//
-//    @Enumerated(EnumType.STRING)
-//    private BookSellStatus bookSellStatus;
-//
-//    private LocalDateTime regTime;
-//
-//    private LocalDateTime updateTime;
-
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 200)
     private String title;           //제목
 
 
@@ -70,19 +51,6 @@ public class Book {
 
     public static Book createBook (Integer stockNumber, BookDto bookDtos) {
         Book book = new Book();
-
-//        for(int i = 0; i<bookDtos.size(); i++) {
-//            book.setTitle(String.valueOf(bookDtos.get(i).getTitle()));
-//            book.setLink(String.valueOf(bookDtos.get(i).getLink()));
-//            book.setImageSrc(String.valueOf(bookDtos.get(i).getImageSrc()));
-//            book.setAuthor(String.valueOf(bookDtos.get(i).getAuthor()));
-//            book.setIsbn(String.valueOf(bookDtos.get(i).getIsbn()));
-//            book.setDiscount(String.valueOf(bookDtos.get(i).getDiscount()));
-//            book.setPublisher(String.valueOf(bookDtos.get(i).getPublisher()));
-//            book.setStockNumber(stockNumber);
-//            book.setDescription(String.valueOf(bookDtos.get(i).getDescription()));
-//        }
-
             book.setTitle(String.valueOf(bookDtos.getTitle()));
             book.setLink(String.valueOf(bookDtos.getLink()));
             book.setImageSrc(String.valueOf(bookDtos.getImageSrc()));

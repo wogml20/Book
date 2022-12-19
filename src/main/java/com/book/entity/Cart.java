@@ -1,38 +1,62 @@
 package com.book.entity;
 
-
-import lombok.*;
-import org.springframework.format.annotation.DateTimeFormat;
+import com.book.dto.BookDto;
+import com.book.dto.CartDto;
+import com.book.dto.MemberFormDto;
+import com.book.repository.BookRepository;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.ArrayList;
 
 @Getter
 @Setter
-@Builder
+@ToString
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
+@Table(name = "cart")
 public class Cart {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "book_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String title;
+    @Column(nullable = false, length = 200)
+    private String title;           //제목
 
-    private String price;
+    @Lob
+    @Column(name = "img")
+    private String imageSrc;        //첵 표지
 
-    private int count;
+
+    @Column(name = "price", nullable = false)
+    private Integer discount;        //가격
 
 
-    @DateTimeFormat(pattern = "yyyy-mm-dd")
-    private LocalDate createDate;
+    @Column(nullable = false)
+    private Integer stockNumber;
 
-    @PrePersist
-    public void createDate() {
-        this.createDate = LocalDate.now();
+
+
+//    public static Cart cartAddBook (Integer stockNumber, CartDto cartDto) {
+//        Cart cart = new Cart();
+//        cart.setTitle(String.valueOf(cartDto.getTitle()));
+//        cart.setImageSrc(String.valueOf(cartDto.getImageSrc()));
+//        cart.setDiscount(String.valueOf(cartDto.getDiscount()));
+//        cart.setStockNumber(stockNumber);
+//
+//        return cart;
+//    }
+
+    public static Cart cartAddBook(CartDto cartDto) {
+        Cart cart = new Cart();
+        cart.setTitle(cartDto.getTitle());
+        cart.setImageSrc(cartDto.getImageSrc());
+        cart.setDiscount(cartDto.getDiscount());
+        cart.setStockNumber(cartDto.getStockNumber());
+
+        return cart;
     }
-
 }

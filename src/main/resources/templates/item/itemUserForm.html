@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       layout:decorate="~{layouts/layout1}">
 
 <th:block layout:fragment="script">
@@ -13,7 +12,7 @@
 </th:block>
 
 <div layout:fragment="content">
-  <form action="/admin/item/new" method="post">
+  <form action="/user/item/search" method="post">
     <div class="jumbotron">
       <h1 class="display-4 text-center">도서 검색</h1>
       <hr class="my-4">
@@ -30,7 +29,7 @@
 
 
 
-  <form action="/admin/item/add" method="post">
+  <form action="/user/item/cart" method="post">
 
     <table class="table">
       <thead>
@@ -39,17 +38,20 @@
         <th scope="col">제목</th>
         <th scope="col">저자</th>
         <th scope="col">출판사</th>
+        <th scope="col">상품금액</th>
         <th scope="col"></th>
       </tr>
       </thead>
       <tbody>
-      <tr th:each="info, status:${bookInfos}">
-        <th><img th:src="${info.imageSrc}" style="width: 65px"; height="95px"></th>
+      <tr th:each="info, status:${bookDtoList}">
+        <td><img th:src="${info.imageSrc}" style="width: 65px"; height="95px"></td>
         <td th:text="${info.title}"></td>
         <td th:text="${info.author}"></td>
         <td th:text="${info.publisher}"></td>
+        <td th:text="${info.discount}"> </td>
         <td>
           <button type="button" class="text-center btn btn-primary addBtn" data-toggle="modal" data-target="#exampleModal">
+            <input type="hidden"> <input type="hidden"> <input type="hidden">
             <input type="hidden" class="hiddenValue">
             <small class="text-white">추가하기</small>
           </button>
@@ -58,15 +60,15 @@
       </tbody>
     </table>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
           <div class="modal-body">
             <label for="customRange1">수량 선택</label>
@@ -76,22 +78,29 @@
             <button type="reset" class="btn btn-secondary" data-dismiss="modal">취소</button>
             <button type="submit" class="btn btn-primary">완료</button>
           </div>
-      </div>
+        </div>
 
+      </div>
     </div>
-  </div>
   </form>
 
   <script>
     const buttons = document.querySelectorAll(".addBtn");
 
     buttons.forEach((el, index) => {
-      el.onclick = () => {
-        // el.setAttribute("name", "index");
+      el.onclick = (e) => {
+        const target = e.target;
+        let imageSrc = e.target.parentElement.parentElement.children[0].childNodes[0].src;
+
         document.querySelector(".hiddenValue").setAttribute("name", "index");
         document.querySelector(".hiddenValue").setAttribute("value", index);
-        // el.setAttribute("value", index);
-        console.log(index);
+
+        target.children[0].setAttribute("name","title");
+        target.children[0].setAttribute("value",target.parentElement.parentElement.children[1].innerHTML);
+        target.children[1].setAttribute("name","discount");
+        target.children[1].setAttribute("value",target.parentElement.parentElement.children[4].innerHTML);
+        target.children[2].setAttribute("name","imageSrc");
+        target.children[2].setAttribute("value",imageSrc);
       }
     });
   </script>
