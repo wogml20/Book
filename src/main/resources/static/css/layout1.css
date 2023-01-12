@@ -11,8 +11,12 @@ body {
 
 }
 
-a:hover:not(.navbar-brand) {
-    border-bottom: 2px solid black;
+nav {
+    border-bottom: 1px solid rgb(103,167,47);
+}
+
+a:hover:not(.navbar-brand, .notBorder) {
+    border-bottom: 1px solid black;
 }
 
 .today_select img, .new_book img {
