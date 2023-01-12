@@ -1,11 +1,165 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layouts/layout1}"
-      charset="utf-8">
+      layout:decorate="~{layouts/layout1}">
 
+         <div layout:fragment="content">
+             <header class="container mb-5">
 
-<div layout:fragment="content">
+                 <h1 class="mt-5"><b>2022년 IT독자의 선택 <br>
+                     올해의 IT책 TOP 10</b></h1>
+                 <img src="https://contents.kyobobook.co.kr/pmtn/2022/banner/221222/i_1624_450.jpg">
+             </header>
 
-  <h1>메인페이지입니다.</h1>
-</div>
+             <br>
+
+             <section class="mt-5 mb-5 container today_select">
+                 <h3 class="mt-5"><b>오늘의 선택</b></h3>
+                 <div class="row">
+                     <div class="col-6 mt-4">
+                         <div class="row">
+                             <div class="col-6">
+                                 <img src="https://contents.kyobobook.co.kr/sih/fit-in/234x0/pdt/9791198129109.jpg">
+                             </div>
+                             <div class="col-6">
+                                 <h5><b>[가정/육아] 베싸육아</b></h5>
+                                 <small>박정은 · 래디시</small>
+                                 <br>
+                                 <br>
+                                 <span class="text-success">10%</span>
+                                 <span class="ml-2"><b>19,800</b>원</span>
+                                 <br><br>
+                                 <span class="fa fa-comments text-info"></span>
+                                 <span class="text-info"> &nbsp; 생애 첫 4년, 방향을 잡으면 육아가 쉬워진다</span>
+
+                                 <br>
+                                 <br>
+                                 <small class="text-dark">15만 부모의 똑똑한 육아 멘토 베싸TV가 과학과 Fact로 정리한 초보 부모 필독서 </small>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-6 mt-4">
+                         <div class="row">
+                             <div class="col-6">
+                                 <img src="https://contents.kyobobook.co.kr/sih/fit-in/234x0/pdt/9788972917915.jpg">
+                             </div>
+                             <div class="col-6">
+                                 <h5><b>[인문] 기대의 발견</b></h5>
+                                 <small>데이비드 롭슨 · 까치</small>
+                                 <br>
+                                 <br>
+                                 <span class="text-success">10%</span>
+                                 <span class="ml-2"><b>18,000</b>원</span>
+                                 <br><br>
+                                 <span class="fa fa-comments text-info"></span>
+                                 <span class="text-info"> &nbsp; 보는 대로 믿는 것이 아니라 믿는 대로 본다</span>
+
+                                 <br>
+                                 <br>
+                                 <small class="text-dark">기대의 힘을 인지하고 삶에 적절하게 적용한다면, 꿈꾸는 미래가 현실이 될 수도 있다!</small>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="row">
+                     <div class="col-6 mt-4">
+                         <div class="row">
+                             <div class="col-6">
+                                 <img src="https://contents.kyobobook.co.kr/sih/fit-in/234x0/pdt/9781668012055.jpg">
+                             </div>
+                             <div class="col-6">
+                                 <h5><b>[인문/사회] Chip War (미국판)</b></h5>
+                                 <small>Miller, Chris · Scribner Book Company</small>
+                                 <br>
+                                 <br>
+                                 <span class="text-success">27%</span>
+                                 <span class="ml-2"><b>17,140</b>원</span>
+                                 <br><br>
+                                 <span class="fa fa-comments text-info"></span>
+                                 <span class="text-info"> &nbsp; 패권의 중심에 선 마이크로칩에 주목하라 </span>
+
+                                 <br>
+                                 <br>
+                                 <small class="text-dark">패권의 중심에 선 마이크로칩에 주목하라 </small>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="col-6 mt-4">
+                         <div class="row">
+                             <div class="col-6">
+                                 <img src="https://contents.kyobobook.co.kr/sih/fit-in/234x0/pdt/9791190382915.jpg">
+                             </div>
+                             <div class="col-6">
+                                 <h5><b>[시/에세이] 생에 감사해</b></h5>
+                                 <small>김혜자 · 수오서재</small>
+                                 <br>
+                                 <br>
+                                 <span class="text-success">10%</span>
+                                 <span class="ml-2"><b>15,300</b>원</span>
+                                 <br><br>
+                                 <span class="fa fa-comments text-info"></span>
+                                 <span class="text-info"> &nbsp; 우리들의 배우 김혜자의 연기, 인생</span>
+
+                                 <br>
+                                 <br>
+                                 <small class="text-dark">한국을 대표하는 연기자, 우리가 사랑하는 배우 김혜자. 지난 60년간 수많은 배역으로 삶의 모순과 고통, 환희와 기쁨을 전해온 이가 세상에 보내는 감사의 기도.</small>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </section>
+             <section class="mt-5 p-5 container mb-5 ad">
+                 <div class="mt-5 d-flex">
+                     <div class="">
+                         <img src="http://image.kyobobook.co.kr/newimages/adcenter/IMAC/creatives/2022/12/28/61856/1__.png" style="width: 100%;">
+                     </div>
+                     <div class="">
+                         <img src="http://image.kyobobook.co.kr/newimages/adcenter/IMAC/creatives/2023/01/04/72889/welcome_main_right.jpg" style="width: 100%; margin-left: 10px">
+                     </div>
+                 </div>
+             </section>
+
+             <section class="mt-5 mb-5 container new_book">
+                 <h3 class="mt-5"><b>화제의 신상</b></h3>
+                 <div class="d-flex">
+                     <div class="mt-4 flex-fill" style="flex-basis:0px">
+                         <img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791198043306.jpg" style="width: 93%"><br><br>
+                         <span><b>말하는 눈</b></span> <br>
+                         <small>노순택 · 한밤의빛</small>
+                     </div>
+                     <div class="mt-4 flex-fill" style="flex-basis:0px">
+                         <img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791167901507.jpg" style="width: 93%"><br><br>
+                         <span><b>몸과 여자들</b></span> <br>
+                         <small>이서수 · 현대문학</small>
+                     </div>
+                     <div class="mt-4 flex-fill" style="flex-basis:0px">
+                         <img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791197559778.jpg" style="width: 93%"><br><br>
+                         <span><b>어떤 양형 이유</b></span> <br>
+                         <small>박주영 · 모로</small>
+                     </div>
+                     <div class="mt-4 flex-fill" style="flex-basis:0px">
+                         <img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791196617141.jpg" style="width: 93%"><br><br>
+                         <span><b>열 번 잘해도 한 번 실수로 무너지는 게 관계다</b></span> <br>
+                         <small>김다슬 · 클라우디아</small>
+                     </div>
+                     <div class="mt-4 flex-fill" style="flex-basis:0px">
+                         <img src="https://contents.kyobobook.co.kr/sih/fit-in/300x0/pdt/9791192730127.jpg" style="width: 93%"><br><br>
+                         <span><b>자주 부끄럽고 가끔 행복했습니다</b></span> <br>
+                         <small>김성호 · 포르체</small>
+                     </div>
+                 </div>
+             </section>
+
+             <section class="mt-5 p-5 container mb-5 ad">
+                 <div class="mt-5 d-flex">
+                     <div class="">
+                         <img src="http://image.kyobobook.co.kr/newimages/adcenter/IMAC/creatives/2023/01/04/2/welmid.png" style="width: 100%;">
+                     </div>
+                     <div class="">
+                         <img src="http://image.kyobobook.co.kr/newimages/adcenter/IMAC/creatives/2023/01/04/52412/_595x180.jpg" style="width: 100%; margin-left: 10px">
+                     </div>
+                 </div>
+             </section>
+        </div>
+    </body>
+</html>

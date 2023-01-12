@@ -6,6 +6,22 @@ html {
 
 body {
     min-height: 100%;
+    color:black;
+    font-font: "Roboto", "Noto Sans KR", "PingFang SC", "Apple SD Gothic Neo", "Microsoft YaHei UI", "Malgun Gothic", sans-serif;
+
+}
+
+a:hover:not(.navbar-brand) {
+    border-bottom: 2px solid black;
+}
+
+.today_select img, .new_book img {
+    box-shadow: 10px 10px 30px rgb(0 0 0 / 8%);
+}
+
+.ad img {
+    border-radius: 10px;
+    display: inline-block;
 }
 
 .footer {
@@ -24,3 +40,4 @@ body {
     margin-left: 50px;
     margin-right: 50px;
 }
+
