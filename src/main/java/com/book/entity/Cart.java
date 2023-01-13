@@ -1,13 +1,9 @@
 package com.book.entity;
 
 import com.book.dto.BookDto;
-import com.book.dto.CartDto;
-import com.book.dto.MemberFormDto;
-import com.book.repository.BookRepository;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 
@@ -50,7 +46,7 @@ public class Cart {
 //        return cart;
 //    }
 
-    public static Cart cartAddBook(CartDto cartDto) {
+    public static Cart cartAddBook(BookDto cartDto) {
         Cart cart = new Cart();
         cart.setTitle(cartDto.getTitle());
         cart.setImageSrc(cartDto.getImageSrc());

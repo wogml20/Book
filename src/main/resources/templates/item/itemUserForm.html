@@ -12,20 +12,20 @@
 </th:block>
 
 <div layout:fragment="content">
-  <form action="/user/item/search" method="post">
-    <div class="jumbotron">
-      <h1 class="display-4 text-center">도서 검색</h1>
-      <hr class="my-4">
+<!--  <form action="/user/item/search" method="post">-->
+<!--    <div class="jumbotron">-->
+<!--      <h1 class="display-4 text-center">도서 검색</h1>-->
+<!--      <hr class="my-4">-->
 
-      <div class="input-group mb-3 text-center">
-        <input type="text" class="form-control" placeholder="책 제목을 입력하세요." aria-describedby="button-addon2" name="title">
+<!--      <div class="input-group mb-3 text-center">-->
+<!--        <input type="text" class="form-control" placeholder="책 제목을 입력하세요." aria-describedby="button-addon2" name="title">-->
 
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="submit" id="button-addon2">검색</button>
-        </div>
-      </div>
-    </div>
-  </form>
+<!--        <div class="input-group-append">-->
+<!--          <button class="btn btn-primary" type="submit" id="button-addon2">검색</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </form>-->
 
 
 
@@ -50,38 +50,61 @@
         <td th:text="${info.publisher}"></td>
         <td th:text="${info.discount}"> </td>
         <td>
-          <button type="button" class="text-center btn btn-primary addBtn" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="text-center btn btn-primary addBtn"  data-toggle="modal" data-target="#exampleModal">
+<!--            data-toggle="modal" data-target="#exampleModal"-->
             <input type="hidden"> <input type="hidden"> <input type="hidden">
             <input type="hidden" class="hiddenValue">
-            <small class="text-white">추가하기</small>
+            <small class="text-white">장바구니</small>
           </button>
         </td>
       </tr>
       </tbody>
     </table>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
+<!--    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--      <div class="modal-dialog" role="document">-->
+<!--        <div class="modal-content">-->
+<!--          <div class="modal-header">-->
+<!--            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
+<!--            <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--              <span aria-hidden="true">&times;</span>-->
+<!--            </button>-->
+<!--          </div>-->
 
-          <div class="modal-body">
-            <label for="customRange1">수량 선택</label>
-            <input type="number" class="ml-3 custom-number" id="customRange1" name="stockNumber">
-          </div>
-          <div class="modal-footer">
-            <button type="reset" class="btn btn-secondary" data-dismiss="modal">취소</button>
-            <button type="submit" class="btn btn-primary">완료</button>
+<!--          <div class="modal-body">-->
+<!--            <label for="customRange1">수량 선택</label>-->
+<!--            <input type="number" class="ml-3 custom-number" id="customRange1" name="stockNumber">-->
+<!--          </div>-->
+<!--          <div class="modal-footer">-->
+<!--            <button type="reset" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
+<!--            <button type="submit" class="btn btn-primary">완료</button>-->
+<!--          </div>-->
+<!--        </div>-->
+
+<!--      </div>-->
+<!--    </div>-->
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content text-center">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">상품이 장바구니에 담겼습니다.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+<!--                <p><b>상품이 장바구니에 담겼습니다.</b></p>-->
+                <small>장바구니로 이동하시겠습니까?</small>
+              </div>
+            <div class="modal-footer">
+              <button type="reset" class="btn btn-secondary" data-dismiss="modal">취소</button>
+              <button type="submit" class="btn" style="background-color:rgb(103,167,47); color: white">확인</button>
+            </div>
           </div>
         </div>
-
-      </div>
-    </div>
+        </div>
   </form>
 
   <script>

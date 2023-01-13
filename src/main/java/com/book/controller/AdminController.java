@@ -80,7 +80,7 @@ public class AdminController {
         log.info(items);
 
         for(int i = 0; i<items.length(); i++) {
-            bookInfos.add(new BookDto((String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author"),(String) items.getJSONObject(i).get("isbn"),(String) items.getJSONObject(i).get("discount"),Integer.parseInt(String.valueOf(100)), (String) items.getJSONObject(i).get("publisher"),(String) items.getJSONObject(i).get("description")));
+            bookInfos.add(new BookDto((String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author"),(String) items.getJSONObject(i).get("isbn"), (Integer) items.getJSONObject(i).get("discount"),Integer.parseInt(String.valueOf(100)), (String) items.getJSONObject(i).get("publisher"),(String) items.getJSONObject(i).get("description")));
         }
 
         model.addAttribute("bookInfos", bookInfos);

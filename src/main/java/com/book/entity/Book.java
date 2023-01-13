@@ -37,7 +37,7 @@ public class Book {
     private String isbn;            //isbn
 
     @Column(name = "price", nullable = false)
-    private String discount;        //가격
+    private Integer discount;        //가격
 
     private String publisher;       // 출판사
 
@@ -56,7 +56,7 @@ public class Book {
             book.setImageSrc(String.valueOf(bookDtos.getImageSrc()));
             book.setAuthor(String.valueOf(bookDtos.getAuthor()));
             book.setIsbn(String.valueOf(bookDtos.getIsbn()));
-            book.setDiscount(String.valueOf(bookDtos.getDiscount()));
+            book.setDiscount((bookDtos.getDiscount()));
             book.setPublisher(String.valueOf(bookDtos.getPublisher()));
             book.setStockNumber(stockNumber);
             book.setDescription(String.valueOf(bookDtos.getDescription()));

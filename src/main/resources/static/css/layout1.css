@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    min-width: 960px;
     min-height: 100%;
     color:black;
     font-font: "Roboto", "Noto Sans KR", "PingFang SC", "Apple SD Gothic Neo", "Microsoft YaHei UI", "Malgun Gothic", sans-serif;
@@ -15,6 +16,14 @@ nav {
     border-bottom: 1px solid rgb(103,167,47);
 }
 
+.navbar-nav input {
+    margin-left: 30px;
+    width: 450px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 50px;
+    border:1px solid rgb(103,167,47);
+}
 a:hover:not(.navbar-brand, .notBorder) {
     border-bottom: 1px solid black;
 }

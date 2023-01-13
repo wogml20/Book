@@ -1,7 +1,106 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org"-->
+<!--      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"-->
+<!--      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"-->
+<!--      layout:decorate="~{layouts/layout1}">-->
+
+<!--<th:block layout:fragment="script">-->
+<!--  <script th:inline="javascript">-->
+<!--    $('#myModal').on('shown.bs.modal', function () {-->
+<!--      $('#myInput').trigger('focus')-->
+<!--    })-->
+<!--  </script>-->
+<!--</th:block>-->
+
+<!--<div layout:fragment="content">-->
+<!--  <form action="/admin/item/new" method="post">-->
+<!--    <div class="jumbotron">-->
+<!--      <h1 class="display-4 text-center">도서 검색</h1>-->
+<!--      <hr class="my-4">-->
+
+<!--      <div class="input-group mb-3 text-center">-->
+<!--        <input type="text" class="form-control" placeholder="책 제목을 입력하세요." aria-describedby="button-addon2" name="title">-->
+
+<!--        <div class="input-group-append">-->
+<!--          <button class="btn btn-primary" type="submit" id="button-addon2">검색</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </form>-->
+
+
+
+<!--  <form action="/admin/item/add" method="post">-->
+
+<!--    <table class="table">-->
+<!--      <thead>-->
+<!--      <tr>-->
+<!--        <th scope="col">이미지</th>-->
+<!--        <th scope="col">제목</th>-->
+<!--        <th scope="col">저자</th>-->
+<!--        <th scope="col">출판사</th>-->
+<!--        <th scope="col"></th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+<!--      <tr th:each="info, status:${bookInfos}">-->
+<!--        <th><img th:src="${info.imageSrc}" style="width: 65px"; height="95px"></th>-->
+<!--        <td th:text="${info.title}"></td>-->
+<!--        <td th:text="${info.author}"></td>-->
+<!--        <td th:text="${info.publisher}"></td>-->
+<!--        <td>-->
+<!--          <button type="button" class="text-center btn btn-primary addBtn" data-toggle="modal" data-target="#exampleModal">-->
+<!--            <input type="hidden" class="hiddenValue">-->
+<!--            <small class="text-white">추가하기</small>-->
+<!--          </button>-->
+<!--        </td>-->
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+
+<!--  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog" role="document">-->
+<!--      <div class="modal-content">-->
+<!--        <div class="modal-header">-->
+<!--          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
+<!--          <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--            <span aria-hidden="true">&times;</span>-->
+<!--          </button>-->
+<!--        </div>-->
+
+<!--          <div class="modal-body">-->
+<!--            <label for="customRange1">수량 선택</label>-->
+<!--            <input type="number" class="ml-3 custom-number" id="customRange1" name="stockNumber">-->
+<!--          </div>-->
+<!--          <div class="modal-footer">-->
+<!--            <button type="reset" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
+<!--            <button type="submit" class="btn btn-primary">완료</button>-->
+<!--          </div>-->
+<!--      </div>-->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--  </form>-->
+
+<!--  <script>-->
+<!--    const buttons = document.querySelectorAll(".addBtn");-->
+
+<!--    buttons.forEach((el, index) => {-->
+<!--      el.onclick = () => {-->
+<!--        // el.setAttribute("name", "index");-->
+<!--        document.querySelector(".hiddenValue").setAttribute("name", "index");-->
+<!--        document.querySelector(".hiddenValue").setAttribute("value", index);-->
+<!--        // el.setAttribute("value", index);-->
+<!--        console.log(index);-->
+<!--      }-->
+<!--    });-->
+<!--  </script>-->
+<!--</div>-->
+
+
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
       layout:decorate="~{layouts/layout1}">
 
 <th:block layout:fragment="script">
@@ -13,24 +112,25 @@
 </th:block>
 
 <div layout:fragment="content">
-  <form action="/admin/item/new" method="post">
-    <div class="jumbotron">
-      <h1 class="display-4 text-center">도서 검색</h1>
-      <hr class="my-4">
+  <!--  <form action="/user/item/search" method="post">-->
+  <!--    <div class="jumbotron">-->
+  <!--      <h1 class="display-4 text-center">도서 검색</h1>-->
+  <!--      <hr class="my-4">-->
 
-      <div class="input-group mb-3 text-center">
-        <input type="text" class="form-control" placeholder="책 제목을 입력하세요." aria-describedby="button-addon2" name="title">
+  <!--      <div class="input-group mb-3 text-center">-->
+  <!--        <input type="text" class="form-control" placeholder="책 제목을 입력하세요." aria-describedby="button-addon2" name="title">-->
 
-        <div class="input-group-append">
-          <button class="btn btn-primary" type="submit" id="button-addon2">검색</button>
-        </div>
-      </div>
-    </div>
-  </form>
+  <!--        <div class="input-group-append">-->
+  <!--          <button class="btn btn-primary" type="submit" id="button-addon2">검색</button>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </form>-->
 
 
 
-  <form action="/admin/item/add" method="post">
+  <p><b>전체 <span th:text="${total}" style="color: rgb(103,167,47);"></span>건</b></p>
+  <form action="/user/item/cart" method="post">
 
     <table class="table">
       <thead>
@@ -39,60 +139,104 @@
         <th scope="col">제목</th>
         <th scope="col">저자</th>
         <th scope="col">출판사</th>
+        <th scope="col">상품금액</th>
         <th scope="col"></th>
       </tr>
       </thead>
       <tbody>
       <tr th:each="info, status:${bookInfos}">
-        <th><img th:src="${info.imageSrc}" style="width: 65px"; height="95px"></th>
+        <td><img th:src="${info.imageSrc}" style="width: 65px"; height="95px"></td>
         <td th:text="${info.title}"></td>
         <td th:text="${info.author}"></td>
         <td th:text="${info.publisher}"></td>
+        <td th:text="${info.discount}" class="price"> </td>
         <td>
-          <button type="button" class="text-center btn btn-primary addBtn" data-toggle="modal" data-target="#exampleModal">
+          <button type="button" class="text-center btn btn-primary addBtn"  data-toggle="modal" data-target="#exampleModal">
+            <!--            data-toggle="modal" data-target="#exampleModal"-->
+            <input type="hidden"> <input type="hidden"> <input type="hidden">
             <input type="hidden" class="hiddenValue">
-            <small class="text-white">추가하기</small>
+            <small class="text-white">장바구니</small>
           </button>
         </td>
       </tr>
       </tbody>
     </table>
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+    <!--    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+    <!--      <div class="modal-dialog" role="document">-->
+    <!--        <div class="modal-content">-->
+    <!--          <div class="modal-header">-->
+    <!--            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
+    <!--            <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+    <!--              <span aria-hidden="true">&times;</span>-->
+    <!--            </button>-->
+    <!--          </div>-->
+
+    <!--          <div class="modal-body">-->
+    <!--            <label for="customRange1">수량 선택</label>-->
+    <!--            <input type="number" class="ml-3 custom-number" id="customRange1" name="stockNumber">-->
+    <!--          </div>-->
+    <!--          <div class="modal-footer">-->
+    <!--            <button type="reset" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
+    <!--            <button type="submit" class="btn btn-primary">완료</button>-->
+    <!--          </div>-->
+    <!--        </div>-->
+
+    <!--      </div>-->
+    <!--    </div>-->
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">상품이 장바구니에 담겼습니다.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
           <div class="modal-body">
-            <label for="customRange1">수량 선택</label>
-            <input type="number" class="ml-3 custom-number" id="customRange1" name="stockNumber">
+            <!--                <p><b>상품이 장바구니에 담겼습니다.</b></p>-->
+            <small>장바구니로 이동하시겠습니까?</small>
           </div>
           <div class="modal-footer">
             <button type="reset" class="btn btn-secondary" data-dismiss="modal">취소</button>
-            <button type="submit" class="btn btn-primary">완료</button>
+            <button type="submit" class="btn" style="background-color:rgb(103,167,47); color: white">확인</button>
           </div>
+        </div>
       </div>
-
     </div>
-  </div>
   </form>
 
   <script>
+
     const buttons = document.querySelectorAll(".addBtn");
 
     buttons.forEach((el, index) => {
-      el.onclick = () => {
-        // el.setAttribute("name", "index");
+      el.onclick = (e) => {
+        const target = e.target;
+        let imageSrc = e.target.parentElement.parentElement.children[0].childNodes[0].src;
+
         document.querySelector(".hiddenValue").setAttribute("name", "index");
         document.querySelector(".hiddenValue").setAttribute("value", index);
-        // el.setAttribute("value", index);
-        console.log(index);
+
+        target.children[0].setAttribute("name","title");
+        target.children[0].setAttribute("value",target.parentElement.parentElement.children[1].innerHTML);
+        target.children[1].setAttribute("name","discount");
+        target.children[1].setAttribute("value",target.parentElement.parentElement.children[4].innerHTML);
+        target.children[2].setAttribute("name","imageSrc");
+        target.children[2].setAttribute("value",imageSrc);
       }
     });
+
+    let price_td = document.querySelectorAll(".price")
+
+    for(let i = 0; i<price_td.length; i++) {
+      let price = price_td[i].innerHTML
+      price *= 1
+
+      if(price == 0) price_td[i].innerHTML = "절판"
+      else price_td[i].innerHTML = price.toLocaleString()
+    }
   </script>
 </div>
