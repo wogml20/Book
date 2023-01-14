@@ -18,7 +18,7 @@ import javax.persistence.*;
 @Getter
 @Table(name = "member")
 @ToString
-public class Member {
+public class Member extends BaseEntity{
 
     @Id
     @Column(name = "member_id")
@@ -28,9 +28,14 @@ public class Member {
     private String name;
 
     @Column(unique = true)
+    private String userid;
+
+    @Column(unique = true)
     private String email;
 
     private String password;
+
+    private String address;
 
     @Enumerated(EnumType.STRING)
     private Role role;
@@ -38,10 +43,11 @@ public class Member {
     public static Member createMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder) {
         Member member = new Member();
         member.setName(memberFormDto.getName());
+        member.setUserid(memberFormDto.getUserid());
         member.setEmail(memberFormDto.getEmail());
         String password = passwordEncoder.encode(memberFormDto.getPassword());
         member.setPassword(password);
-        log.info(memberFormDto.getRole());
+        member.setAddress(memberFormDto.getAddress());
         member.setRole(memberFormDto.getRole());
 
         return member;

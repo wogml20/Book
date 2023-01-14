@@ -1,6 +1,7 @@
 package com.book.controller;
 
 
+import com.book.constant.Role;
 import com.book.dto.MemberFormDto;
 import com.book.entity.Member;
 import com.book.service.MemberService;
@@ -37,18 +38,26 @@ public class MemberController {
     @PostMapping("/new")
     public String memberForm(@Valid MemberFormDto memberFormDto, BindingResult bindingResult, Model model) {
 
+        String user_id = memberFormDto.getUserid();
+        int length = memberFormDto.getUserid().length();
+
         if(bindingResult.hasErrors()) {
-//            return "member/memberForm";
             return "member/joinError";
         }
         try {
+            if(user_id.substring(length-5,length).toString().equals("admin")) {
+                memberFormDto.setRole(Role.ADMIN);
+            } else {
+                memberFormDto.setRole(Role.USER);
+            }
+
             Member member = Member.createMember(memberFormDto, passwordEncoder);
+            log.info(memberFormDto.getRole());
             memberService.saveMember(member);
         } catch (IllegalStateException e) {
             model.addAttribute("errorMessage", e.getMessage());
             return "member/memberForm";
         }
-
 
 //        return "redirect:/";
         return "member/joinSuccess";

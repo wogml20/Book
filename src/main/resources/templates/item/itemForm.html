@@ -2,6 +2,106 @@
 <!--<html xmlns:th="http://www.thymeleaf.org"-->
 <!--      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"-->
 <!--      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"-->
+<!--      layout:decorate="~{layouts/loginLayout}">-->
+
+<!--<th:block layout:fragment="script">-->
+<!--  <script th:inline="javascript">-->
+<!--    $('#myModal').on('shown.bs.modal', function () {-->
+<!--      $('#myInput').trigger('focus')-->
+<!--    })-->
+<!--  </script>-->
+<!--</th:block>-->
+
+<!--<div layout:fragment="content">-->
+<!--  <form action="/admin/item/new" method="post">-->
+<!--    <div class="jumbotron">-->
+<!--      <h1 class="display-4 text-center">도서 검색</h1>-->
+<!--      <hr class="my-4">-->
+
+<!--      <div class="input-group mb-3 text-center">-->
+<!--        <input type="text" class="form-control" placeholder="책 제목을 입력하세요." aria-describedby="button-addon2" name="title">-->
+
+<!--        <div class="input-group-append">-->
+<!--          <button class="btn btn-primary" type="submit" id="button-addon2">검색</button>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </form>-->
+
+
+
+<!--  <form action="/admin/item/add" method="post">-->
+
+<!--    <table class="table">-->
+<!--      <thead>-->
+<!--      <tr>-->
+<!--        <th scope="col">이미지</th>-->
+<!--        <th scope="col">제목</th>-->
+<!--        <th scope="col">저자</th>-->
+<!--        <th scope="col">출판사</th>-->
+<!--        <th scope="col"></th>-->
+<!--      </tr>-->
+<!--      </thead>-->
+<!--      <tbody>-->
+<!--      <tr th:each="info, status:${bookInfos}">-->
+<!--        <th><img th:src="${info.imageSrc}" style="width: 65px"; height="95px"></th>-->
+<!--        <td th:text="${info.title}"></td>-->
+<!--        <td th:text="${info.author}"></td>-->
+<!--        <td th:text="${info.publisher}"></td>-->
+<!--        <td>-->
+<!--          <button type="button" class="text-center btn btn-primary addBtn" data-toggle="modal" data-target="#exampleModal">-->
+<!--            <input type="hidden" class="hiddenValue">-->
+<!--            <small class="text-white">추가하기</small>-->
+<!--          </button>-->
+<!--        </td>-->
+<!--      </tr>-->
+<!--      </tbody>-->
+<!--    </table>-->
+
+<!--  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">-->
+<!--    <div class="modal-dialog" role="document">-->
+<!--      <div class="modal-content">-->
+<!--        <div class="modal-header">-->
+<!--          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>-->
+<!--          <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--            <span aria-hidden="true">&times;</span>-->
+<!--          </button>-->
+<!--        </div>-->
+
+<!--          <div class="modal-body">-->
+<!--            <label for="customRange1">수량 선택</label>-->
+<!--            <input type="number" class="ml-3 custom-number" id="customRange1" name="stockNumber">-->
+<!--          </div>-->
+<!--          <div class="modal-footer">-->
+<!--            <button type="reset" class="btn btn-secondary" data-dismiss="modal">취소</button>-->
+<!--            <button type="submit" class="btn btn-primary">완료</button>-->
+<!--          </div>-->
+<!--      </div>-->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--  </form>-->
+
+<!--  <script>-->
+<!--    const buttons = document.querySelectorAll(".addBtn");-->
+
+<!--    buttons.forEach((el, index) => {-->
+<!--      el.onclick = () => {-->
+<!--        // el.setAttribute("name", "index");-->
+<!--        document.querySelector(".hiddenValue").setAttribute("name", "index");-->
+<!--        document.querySelector(".hiddenValue").setAttribute("value", index);-->
+<!--        // el.setAttribute("value", index);-->
+<!--        console.log(index);-->
+<!--      }-->
+<!--    });-->
+<!--  </script>-->
+<!--</div>
+-->
+
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org"-->
+<!--      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"-->
+<!--      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"-->
 <!--      layout:decorate="~{layouts/layout1}">-->
 
 <!--<th:block layout:fragment="script">-->

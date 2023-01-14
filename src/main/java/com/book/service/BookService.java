@@ -1,6 +1,7 @@
 package com.book.service;
 
 
+import com.book.dto.BookFormDto;
 import com.book.entity.Book;
 import com.book.repository.BookRepository;
 import com.book.repository.CartRepository;
@@ -18,11 +19,13 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BookService {
 
-    @Autowired
     private final BookRepository bookRepository;
 
-    public Book saveBook(Book book) {
-        return bookRepository.save(book);
+    public Long saveBook(BookFormDto bookFormDto) {
+        Book book = bookFormDto.createBook();
+        bookRepository.save(book);
+
+        return book.getId();
     }
     
     @Transactional

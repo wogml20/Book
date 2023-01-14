@@ -1,11 +1,14 @@
 package com.book.entity;
 
+import com.book.constant.BookSellStatus;
 import com.book.dto.BookDto;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 @Getter
@@ -13,7 +16,7 @@ import java.util.ArrayList;
 @ToString
 @Entity
 @Table(name = "book")
-public class Book {
+public class Book extends BaseEntity{
 
     @Id
     @Column(name = "book_id")
@@ -24,21 +27,21 @@ public class Book {
     @Column(nullable = false, length = 200)
     private String title;           //제목
 
-
-    private String link;            //네이버스토어 링크
+//    private String link;            //네이버스토어
 
     @Lob
     @Column(name = "img", unique = true)
     private String imageSrc;        //첵 표지
 
-
     private String author;          //작가
 
+    @Column(nullable = false)
+    private int stockNumber;
 
     private String isbn;            //isbn
 
     @Column(name = "price", nullable = false)
-    private Integer discount;        //가격
+    private int discount;        //가격
 
     private String publisher;       // 출판사
 
@@ -46,6 +49,8 @@ public class Book {
     @Column(nullable = false, unique = true)
     private String description;     //상세 설명
 
+    @Enumerated(EnumType.STRING)
+    private BookSellStatus bookSellStatus;
 
     public static Book createBook (ArrayList<BookDto> bookDtos) {
         Book book = new Book();
@@ -60,7 +65,6 @@ public class Book {
 
         for(int i = 0; i<bookDtos.size(); i++) {
             book.setTitle(String.valueOf(bookDtos.get(i).getTitle()));
-            book.setLink(String.valueOf(bookDtos.get(i).getLink()));
             book.setImageSrc(String.valueOf(bookDtos.get(i).getImageSrc()));
             book.setAuthor(String.valueOf(bookDtos.get(i).getAuthor()));
             book.setIsbn(String.valueOf(bookDtos.get(i).getIsbn()));

@@ -12,7 +12,7 @@ import javax.persistence.*;
 @ToString
 @Entity
 @Table(name = "cart")
-public class Cart {
+public class Cart extends BaseEntity{
 
     @Id
     @Column(name = "cart_id")
@@ -20,9 +20,10 @@ public class Cart {
     private Long id;
 
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name ="member_id")
     private Member member;
+
 
 
 //    @Column(nullable = false, length = 200)
@@ -37,8 +38,7 @@ public class Cart {
 //    private Integer discount;        //가격
 //
 //
-//    @Column(nullable = false)
-//    private Integer stockNumber;
+
 
 
 
@@ -52,12 +52,8 @@ public class Cart {
 //        return cart;
 //    }
 
-    public static Cart cartAddBook(BookDto cartDto) {
+    public static Cart cartAddBook(BookDto car) {
         Cart cart = new Cart();
-//        cart.setTitle(cartDto.getTitle());
-//        cart.setImageSrc(cartDto.getImageSrc());
-//        cart.setDiscount(cartDto.getDiscount());
-//        cart.setStockNumber(cartDto.getStockNumber());
 
         return cart;
     }

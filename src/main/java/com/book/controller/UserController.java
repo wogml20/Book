@@ -106,12 +106,12 @@ public class UserController {
         log.info("items = " + items);
         log.info("total = " + total);
 
-        for(int i = 0; i<items.length(); i++) {
-            bookInfos.add(new BookDto((String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author"),(String) items.getJSONObject(i).get("isbn"),Integer.parseInt((String) items.getJSONObject(i).get("discount")), (String) items.getJSONObject(i).get("publisher"),(String) items.getJSONObject(i).get("description")));
-        }
-
-        model.addAttribute("total",total);
-        model.addAttribute("bookInfos", bookInfos);
+//        for(int i = 0; i<items.length(); i++) {
+//            bookInfos.add(new BookDto((String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author"),(String) items.getJSONObject(i).get("isbn"),Integer.parseInt((String) items.getJSONObject(i).get("discount")), (String) items.getJSONObject(i).get("publisher"),(String) items.getJSONObject(i).get("description")));
+//        }
+//
+//        model.addAttribute("total",total);
+//        model.addAttribute("bookInfos", bookInfos);
 
 
 //        Book book = Book.createBook(bookInfos);
