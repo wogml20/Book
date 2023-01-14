@@ -16,6 +16,10 @@ nav {
     border-bottom: 1px solid rgb(103,167,47);
 }
 
+a {
+    text-decoration:none;
+}
+
 .navbar-nav input {
     margin-left: 30px;
     width: 450px;
@@ -24,9 +28,9 @@ nav {
     border-radius: 50px;
     border:1px solid rgb(103,167,47);
 }
-a:hover:not(.navbar-brand, .notBorder) {
-    border-bottom: 1px solid black;
-}
+/*a:hover:not(.navbar-brand, .notBorder) {*/
+/*    border-bottom: 1px solid black;*/
+/*}*/
 
 .today_select img, .new_book img {
     box-shadow: 10px 10px 30px rgb(0 0 0 / 8%);

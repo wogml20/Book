@@ -15,24 +15,30 @@ import javax.persistence.*;
 public class Cart {
 
     @Id
-    @Column(name = "book_id")
+    @Column(name = "cart_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Column(nullable = false, length = 200)
-    private String title;           //제목
 
-    @Lob
-    @Column(name = "img")
-    private String imageSrc;        //첵 표지
+    @OneToOne
+    @JoinColumn(name ="member_id")
+    private Member member;
 
 
-    @Column(name = "price", nullable = false)
-    private Integer discount;        //가격
-
-
-    @Column(nullable = false)
-    private Integer stockNumber;
+//    @Column(nullable = false, length = 200)
+//    private String title;           //제목
+//
+//    @Lob
+//    @Column(name = "img")
+//    private String imageSrc;        //첵 표지
+//
+//
+//    @Column(name = "price", nullable = false)
+//    private Integer discount;        //가격
+//
+//
+//    @Column(nullable = false)
+//    private Integer stockNumber;
 
 
 
@@ -48,10 +54,10 @@ public class Cart {
 
     public static Cart cartAddBook(BookDto cartDto) {
         Cart cart = new Cart();
-        cart.setTitle(cartDto.getTitle());
-        cart.setImageSrc(cartDto.getImageSrc());
-        cart.setDiscount(cartDto.getDiscount());
-        cart.setStockNumber(cartDto.getStockNumber());
+//        cart.setTitle(cartDto.getTitle());
+//        cart.setImageSrc(cartDto.getImageSrc());
+//        cart.setDiscount(cartDto.getDiscount());
+//        cart.setStockNumber(cartDto.getStockNumber());
 
         return cart;
     }

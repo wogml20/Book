@@ -2,7 +2,9 @@ package com.book.controller;
 
 import com.book.dto.BookDto;
 import com.book.dto.CartDto;
+import com.book.entity.Book;
 import com.book.entity.Cart;
+import com.book.entity.Member;
 import com.book.repository.BookRepository;
 import com.book.repository.CartRepository;
 import com.book.service.BookService;
@@ -21,6 +23,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import javax.servlet.http.HttpServletRequest;
+import java.lang.reflect.Array;
 import java.net.URI;
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
@@ -44,11 +47,13 @@ public class UserController {
 
     @Autowired
     CartRepository cartRepository;
+    BookDto bookDto;
 
-    ArrayList<BookDto> bookInfos = new ArrayList<>();
+    public ArrayList<BookDto> bookInfos = new ArrayList<>();
     ArrayList<BookDto> cartDtoList = new ArrayList<BookDto>();
     CartDto cartDto;
 
+    Cart cart;
     @GetMapping(value = "/item/search")
     public String itemSearchGet() {
         return "item/itemForm";
@@ -93,20 +98,24 @@ public class UserController {
         String r = result.getBody();
 
         JSONObject value = new JSONObject(r);
-        log.info(value);
+        log.info("value = " + value);
 
 
         JSONArray items = value.getJSONArray("items");
         Integer total = (Integer) value.get("total");
-        log.info(items);
-        log.info(total);
+        log.info("items = " + items);
+        log.info("total = " + total);
 
         for(int i = 0; i<items.length(); i++) {
-            bookInfos.add(new BookDto((String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author"),(String) items.getJSONObject(i).get("isbn"),Integer.parseInt((String) items.getJSONObject(i).get("discount")),Integer.parseInt(String.valueOf(1)), (String) items.getJSONObject(i).get("publisher"),(String) items.getJSONObject(i).get("description")));
+            bookInfos.add(new BookDto((String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author"),(String) items.getJSONObject(i).get("isbn"),Integer.parseInt((String) items.getJSONObject(i).get("discount")), (String) items.getJSONObject(i).get("publisher"),(String) items.getJSONObject(i).get("description")));
         }
 
         model.addAttribute("total",total);
         model.addAttribute("bookInfos", bookInfos);
+
+
+//        Book book = Book.createBook(bookInfos);
+//        bookService.saveBook(book);
 
         return "item/itemForm";
     }
@@ -139,7 +148,7 @@ public class UserController {
 
 //        Integer discount = Integer.parseInt(discount_t);
 //        Integer stockNumber = Integer.parseInt(query_stock_number);
-        Cart cart;
+
 ////
 //        cartDtoList.add((new CartDto(title, imageSrc, discount, 1)));
         cartDtoList.add(bookInfos.get(i));
@@ -160,4 +169,28 @@ public class UserController {
         model.addAttribute("cartDtos", cartDtoList);
         return "item/itemCart";
     }
+
+    @PostMapping("/item/update")
+    public String itemUpdate(HttpServletRequest httpServletRequest, Model model) throws Exception {
+
+        Integer stockNumber = Integer.valueOf(httpServletRequest.getParameter("stockNumber"));
+        log.info(httpServletRequest.getParameter("index"));
+//        cartDtoList.get(index).setStockNumber(stockNumber);
+//        cart = Cart.cartAddBook(cartDtoList.get(index));
+//        cartService.saveCart(cart);
+
+        model.addAttribute("cartDtos", cartDtoList);
+        return "item/itemCart";
+    }
+
+    @GetMapping("/book/detail/{id}")
+    public String bookDetail(@PathVariable("id") int id, Model model) {
+
+
+
+        model.addAttribute("bookDetail", bookInfos.get(id));
+        return "item/itemDetail";
+    }
+
+
 }

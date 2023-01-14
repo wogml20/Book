@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 @RequestMapping("/members")
 @Controller
@@ -35,7 +38,8 @@ public class MemberController {
     public String memberForm(@Valid MemberFormDto memberFormDto, BindingResult bindingResult, Model model) {
 
         if(bindingResult.hasErrors()) {
-            return "member/memberForm";
+//            return "member/memberForm";
+            return "member/joinError";
         }
         try {
             Member member = Member.createMember(memberFormDto, passwordEncoder);
@@ -45,7 +49,9 @@ public class MemberController {
             return "member/memberForm";
         }
 
-        return "redirect:/";
+
+//        return "redirect:/";
+        return "member/joinSuccess";
     }
 
 
