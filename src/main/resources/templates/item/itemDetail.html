@@ -22,15 +22,15 @@
 
       calculateToalPrice();
 
-      $("#count").change( function(){
+      $("#stockNumber").change( function(){
         calculateToalPrice();
       });
     });
 
     function calculateToalPrice(){
-      var count = $("#count").val();
+      var stockNumber = $("#stockNumber").val();
       var price = $("#price").val();
-      var totalPrice = price*count;
+      var totalPrice = price*stockNumber;
       $("#totalPrice").html('총 상품금액' + totalPrice + '원');
     }
 
@@ -43,7 +43,7 @@
       var url = "/order";
       var paramData = {
         bookId : $("#bookId").val(),
-        count : $("#count").val()
+        stockNumber : $("#stockNumber").val()
       };
 
       var param = JSON.stringify(paramData);
@@ -83,7 +83,7 @@
       var url = "/cart";
       var paramData = {
         bookId : $("#bookId").val(),
-        count : $("#count").val()
+        stockNumber : $("#stockNumber").val()
       };
 
       var param = JSON.stringify(paramData);
@@ -157,7 +157,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">수량</span>
           </div>
-          <input type="number" name="count" id="count" class="form-control" value="1" min="1">
+          <input type="number" name="stockNumber" id="stockNumber" class="form-control" value="1" min="1">
         </div>
       </div>
     </div>

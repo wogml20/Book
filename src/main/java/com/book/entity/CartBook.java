@@ -24,21 +24,21 @@ public class CartBook extends BaseEntity{
     @JoinColumn(name = "book_id")
     private Book book;
 
-    private int count;
+    private int stockNumber;
 
-    public static CartBook createCartBook(Cart cart, Book book, int count) {
+    public static CartBook createCartBook(Cart cart, Book book, int stockNumber) {
         CartBook cartBook = new CartBook();
         cartBook.setCart(cart);
         cartBook.setBook(book);
-        cartBook.setCount(count);
+        cartBook.setStockNumber(stockNumber);
         return cartBook;
     }
 
-    public void addCount(int count) {
-        this.count += count;
+    public void addCount(int stockNumber) {
+        this.stockNumber += stockNumber;
     }
 
-    public void updateCount(int count) {
-        this.count = count;
+    public void updateCount(int stockNumber) {
+        this.stockNumber = stockNumber;
     }
 }

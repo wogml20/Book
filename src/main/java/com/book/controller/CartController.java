@@ -5,6 +5,7 @@ import com.book.dto.CartBookDto;
 import com.book.dto.CartDetailDto;
 import com.book.dto.CartOrderDto;
 import com.book.service.CartService;
+import lombok.extern.log4j.Log4j2;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +20,7 @@ import java.security.Principal;
 import java.util.List;
 
 @Controller
+@Log4j2
 @RequiredArgsConstructor
 public class CartController {
 
@@ -55,14 +57,15 @@ public class CartController {
     }
 
     @PatchMapping(value = "/cartBook/{cartBookId}")
-    public @ResponseBody ResponseEntity updateCartBook(@PathVariable("cartBookId") Long cartBookId, int count, Principal principal) {
-        if(count <= 0) {
+    public @ResponseBody ResponseEntity updateCartBook(@PathVariable("cartBookId") Long cartBookId, int stockNumber, Principal principal) {
+        log.info("=============stockNumber=========" +stockNumber);
+        if(stockNumber <= 0) {
             return new ResponseEntity<String>("최소 1개 이상 담아주세요,", HttpStatus.BAD_REQUEST);
         } else if(!cartService.validateCartBook(cartBookId,principal.getName())) {
             return new ResponseEntity<String>("수정 권한이 없습니다.", HttpStatus.FORBIDDEN);
         }
 
-        cartService.updateCartBookCount(cartBookId, count);
+        cartService.updateCartBookCount(cartBookId, stockNumber);
         return new ResponseEntity<Long>(cartBookId,HttpStatus.OK);
     }
 

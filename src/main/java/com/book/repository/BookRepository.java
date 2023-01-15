@@ -19,6 +19,7 @@ public interface BookRepository extends JpaRepository<Book, Long>, QuerydslPredi
 
     List<Book> findAll();
 
+
     @Query("select i from Book i where i.description like %:description% order by i.discount desc")
     List<Book> findByDescription(@Param("description") String description);
 }
