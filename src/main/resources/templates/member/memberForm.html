@@ -4,7 +4,6 @@
       layout:decorate="~{layouts/loginLayout}"
       charset="utf-8">
 
-
 <th:block layout:fragment="css">
     <style>
         body {
@@ -93,7 +92,6 @@
         <div style="text-align: center">
             <button type="submit" class="btn" style="background-color: rgb(103,167,47); color: white">회원가입</button>
         </div>
-        <input type="hidden" th:name="${_csrf?.parameterName}" th:value="${_csrf?.token}">
-
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
     </form>
 </div>

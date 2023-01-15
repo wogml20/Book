@@ -2,6 +2,8 @@ package com.book.entity;
 
 import com.book.constant.BookSellStatus;
 import com.book.dto.BookDto;
+import com.book.dto.BookFormDto;
+import com.book.exception.OutOfStockException;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -54,14 +56,6 @@ public class Book extends BaseEntity{
 
     public static Book createBook (ArrayList<BookDto> bookDtos) {
         Book book = new Book();
-//            book.setTitle(String.valueOf(bookDtos.getTitle()));
-//            book.setLink(String.valueOf(bookDtos.getLink()));
-//            book.setImageSrc(String.valueOf(bookDtos.getImageSrc()));
-//            book.setAuthor(String.valueOf(bookDtos.getAuthor()));
-//            book.setIsbn(String.valueOf(bookDtos.getIsbn()));
-//            book.setDiscount((bookDtos.getDiscount()));
-//            book.setPublisher(String.valueOf(bookDtos.getPublisher()));
-//            book.setDescription(String.valueOf(bookDtos.getDescription()));
 
         for(int i = 0; i<bookDtos.size(); i++) {
             book.setTitle(String.valueOf(bookDtos.get(i).getTitle()));
@@ -73,8 +67,31 @@ public class Book extends BaseEntity{
             book.setDescription(String.valueOf(bookDtos.get(i).getDescription()));
 
         }
-
-
         return book;
+    }
+
+    public void updateBook(BookFormDto bookFormDto) {
+        this.title = bookFormDto.getTitle();
+        this.imageSrc = bookFormDto.getImageSrc();
+        this.discount = bookFormDto.getDiscount();
+        this.author = bookFormDto.getAuthor();
+        this.description = bookFormDto.getDescription();
+        this.isbn = bookFormDto.getIsbn();
+        this.bookSellStatus = bookFormDto.getBookSellStatus();
+        this.publisher = bookFormDto.getPublisher();
+        this.stockNumber = bookFormDto.getStockNumber();
+
+    }
+
+    public void removeStock(int stockNumber) {
+        int restStock = this.stockNumber - stockNumber;
+        if(restStock < 0) {
+            throw new OutOfStockException("상품의 재고가 부족합니다. (현재 재고 수량: " + this.stockNumber + ")");
+        }
+        this.stockNumber = restStock;
+    }
+
+    public void addStock(int stockNumber) {
+        this.stockNumber += stockNumber;
     }
 }

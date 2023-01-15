@@ -128,47 +128,47 @@ public class UserController {
         return "item/itemCart";
     }
 
-    @PostMapping("/item/cart")
-    public String bookAddCartPost(HttpServletRequest httpServletRequest, Model model) throws Exception {
-
-//        Integer stockNumber = Integer.valueOf(httpServletRequest.getParameter("stockNumber"));
-        String index = httpServletRequest.getParameter("index");
-        String title = httpServletRequest.getParameter("title");
-//        String discount_t = httpServletRequest.getParameter("discount");
-//        String imageSrc = httpServletRequest.getParameter("imageSrc");
-
-//        log.info("수량 선택 ============= " + stockNumber);
-        log.info("선택한 id ============= " + index);
-        log.info("선택한 title ============= " + title);
-//        log.info("선택한 discount ============= " + discount_t);
-//        log.info("선택한 imageSrc ============= " + imageSrc);
-
-
-        Integer i = Integer.parseInt(index);
-
-//        Integer discount = Integer.parseInt(discount_t);
-//        Integer stockNumber = Integer.parseInt(query_stock_number);
-
-////
-//        cartDtoList.add((new CartDto(title, imageSrc, discount, 1)));
-        cartDtoList.add(bookInfos.get(i));
+//    @PostMapping("/item/cart")
+//    public String bookAddCartPost(HttpServletRequest httpServletRequest, Model model) throws Exception {
 //
-        try {
-            cart = Cart.cartAddBook(cartDtoList.get(i));
-            cartService.saveCart(cart);
-        } catch (IllegalStateException e) {
-            model.addAttribute("errorMessage", e.getMessage());
-            return "item/itemCart";
-        }
+////        Integer stockNumber = Integer.valueOf(httpServletRequest.getParameter("stockNumber"));
+//        String index = httpServletRequest.getParameter("index");
+//        String title = httpServletRequest.getParameter("title");
+////        String discount_t = httpServletRequest.getParameter("discount");
+////        String imageSrc = httpServletRequest.getParameter("imageSrc");
 //
-        log.info(cart);
-        log.info("====================bookrepository====================");
-        log.info(cartDtoList);
-
+////        log.info("수량 선택 ============= " + stockNumber);
+//        log.info("선택한 id ============= " + index);
+//        log.info("선택한 title ============= " + title);
+////        log.info("선택한 discount ============= " + discount_t);
+////        log.info("선택한 imageSrc ============= " + imageSrc);
+//
+//
+//        Integer i = Integer.parseInt(index);
+//
+////        Integer discount = Integer.parseInt(discount_t);
+////        Integer stockNumber = Integer.parseInt(query_stock_number);
+//
+//////
+////        cartDtoList.add((new CartDto(title, imageSrc, discount, 1)));
+//        cartDtoList.add(bookInfos.get(i));
 ////
-        model.addAttribute("cartDtos", cartDtoList);
-        return "item/itemCart";
-    }
+//        try {
+//            cart = Cart.cartAddBook(cartDtoList.get(i));
+//            cartService.saveCart(cart);
+//        } catch (IllegalStateException e) {
+//            model.addAttribute("errorMessage", e.getMessage());
+//            return "item/itemCart";
+//        }
+////
+//        log.info(cart);
+//        log.info("====================bookrepository====================");
+//        log.info(cartDtoList);
+//
+//////
+//        model.addAttribute("cartDtos", cartDtoList);
+//        return "item/itemCart";
+//    }
 
     @PostMapping("/item/update")
     public String itemUpdate(HttpServletRequest httpServletRequest, Model model) throws Exception {
@@ -185,9 +185,6 @@ public class UserController {
 
     @GetMapping("/book/detail/{id}")
     public String bookDetail(@PathVariable("id") int id, Model model) {
-
-
-
         model.addAttribute("bookDetail", bookInfos.get(id));
         return "item/itemDetail";
     }

@@ -2,15 +2,18 @@ package com.book.service;
 
 
 import com.book.dto.BookFormDto;
+import com.book.dto.BookSearchDto;
+import com.book.dto.MainBookDto;
 import com.book.entity.Book;
 import com.book.repository.BookRepository;
-import com.book.repository.CartRepository;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.transaction.annotation.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
 @Service
@@ -34,4 +37,28 @@ public class BookService {
         return bookDtoList;
     }
 
+    @Transactional(readOnly = true)
+    public BookFormDto getBookDtl(Long bookId) {
+        Book book = bookRepository.findById(bookId)
+                .orElseThrow(EntityNotFoundException::new);
+        BookFormDto bookFormDto = BookFormDto.of(book);
+        return bookFormDto;
+    }
+
+    public Long updateBook(BookFormDto bookFormDto) throws Exception {
+        Book book = bookRepository.findById(bookFormDto.getId()).orElseThrow(EntityNotFoundException::new);
+        book.updateBook(bookFormDto);
+        return book.getId();
+    }
+
+
+    @Transactional(readOnly = true)
+    public Page<Book> getAdminBookPage(BookSearchDto bookSearchDto, Pageable pageable) {
+        return bookRepository.getAdminBookPage(bookSearchDto, pageable);
+    }
+
+    @Transactional(readOnly = true)
+    public Page<MainBookDto> getMainBookPage(BookSearchDto bookSearchDto, Pageable pageable) {
+        return bookRepository.getMainBookPage(bookSearchDto, pageable);
+    }
 }

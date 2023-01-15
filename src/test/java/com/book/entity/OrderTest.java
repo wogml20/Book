@@ -59,7 +59,7 @@ class OrderTest {
         for(int i = 0; i<3; i++) {
             Book book = this.createBook();
             bookRepository.save(book);
-            OrderItem orderItem = new OrderItem();
+            OrderBook orderItem = new OrderBook();
             orderItem.setBook(book);
             orderItem.setCount(10);
             orderItem.setOrderPrice(1000);
@@ -84,7 +84,7 @@ class OrderTest {
         for(int i = 0; i<3; i++) {
             Book book = this.createBook();
             bookRepository.save(book);
-            OrderItem orderItem = new OrderItem();
+            OrderBook orderItem = new OrderBook();
             orderItem.setBook(book);
             orderItem.setCount(10);
             orderItem.setOrderPrice(1000);

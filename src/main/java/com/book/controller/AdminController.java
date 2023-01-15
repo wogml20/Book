@@ -1,7 +1,9 @@
 package com.book.controller;
 
+import com.book.constant.BookSellStatus;
 import com.book.dto.BookDto;
 import com.book.dto.BookFormDto;
+import com.book.dto.BookSearchDto;
 import com.book.entity.Book;
 import com.book.repository.BookRepository;
 import com.book.service.BookService;
@@ -10,6 +12,9 @@ import lombok.extern.log4j.Log4j2;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -18,6 +23,8 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
+
+import javax.persistence.EntityNotFoundException;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.net.URI;
@@ -25,6 +32,7 @@ import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Optional;
 
 
 @Controller
@@ -111,21 +119,14 @@ public class AdminController {
         String publisher = httpServletRequest.getParameter("publisher");
         String isbn = httpServletRequest.getParameter("isbn");
         String imgSrc = httpServletRequest.getParameter("imgSrc");
+        String description = httpServletRequest.getParameter("description");
 
-        log.info(title);
-        log.info(stockNumber);
-        log.info(discount);
-
+        log.info(description);
 
         if(bindingResult.hasErrors()) {
             log.info("오류 발생");
-            return "/item/itemAdd";
+            return "item/itemAdd";
         }
-
-//        if(bookFormDto.getId() == null) {
-//            log.info("오류 발생");
-//            return "/item/itemAdd";
-//        }
 
         try {
             bookFormDto.setTitle(title);
@@ -135,6 +136,7 @@ public class AdminController {
             bookFormDto.setPublisher(publisher);
             bookFormDto.setStockNumber(stockNumber);
             bookFormDto.setDiscount(discount);
+            bookFormDto.setDescription(description);
 
             bookService.saveBook(bookFormDto);
         } catch (Exception e) {
@@ -145,10 +147,67 @@ public class AdminController {
         return "redirect:/";
     }
 
+    @GetMapping(value = "/update/{bookId}")
+    public String bookDtl(@PathVariable("bookId") Long bookId, Model model) {
+        try {
+            BookFormDto bookFormDto = bookService.getBookDtl(bookId);
+            model.addAttribute("bookDetail", bookFormDto);
+        }catch (EntityNotFoundException e) {
+            model.addAttribute("errorMessage", "존재하지 않는 상품입니다.");
+            model.addAttribute("bookFormDto", new BookFormDto());
+            return "item/itemAdd";
+        }
+        return "item/itemUpdate";
+    }
 
-//    @GetMapping("/item/add")
-//    public String bootManage(Model model) throws Exception {
-//        model.addAttribute("bookDtos", bookRepository.findAll());
-//        return "item/itemAdd";
-//    }
+    @PostMapping(value = "/update/{bookId}")
+    public String bookUpdate(@Valid BookFormDto bookFormDto, BindingResult bindingResult, @PathVariable("bookId") Long bookId, Model model, HttpServletRequest httpServletRequest) {
+
+        Integer stockNumber = Integer.valueOf(httpServletRequest.getParameter("stockNumber"));
+        Integer discount = Integer.valueOf(httpServletRequest.getParameter("discount"));
+        String title = httpServletRequest.getParameter("title");
+        String author = httpServletRequest.getParameter("author");
+        String publisher = httpServletRequest.getParameter("publisher");
+        String isbn = httpServletRequest.getParameter("isbn");
+        String imgSrc = httpServletRequest.getParameter("imgSrc");
+        String bookSellStatus = httpServletRequest.getParameter("bookSellStatus");
+        String description = httpServletRequest.getParameter("description");
+
+        bookFormDto.setId(bookId);
+        bookFormDto.setTitle(title);
+        bookFormDto.setImageSrc(imgSrc);
+        bookFormDto.setAuthor(author);
+        bookFormDto.setIsbn(isbn);
+        bookFormDto.setPublisher(publisher);
+        bookFormDto.setStockNumber(stockNumber);
+        bookFormDto.setBookSellStatus(BookSellStatus.valueOf(bookSellStatus));
+        bookFormDto.setDiscount(discount);
+        bookFormDto.setDescription(description);
+
+        if(bindingResult.hasErrors()) {
+            log.info("오류 발생");
+            model.addAttribute("bookDetail", bookFormDto);
+            return "/item/itemUpdate";
+        }
+        try {
+            bookService.updateBook(bookFormDto);
+        }catch (Exception e) {
+            model.addAttribute("errorMessage", "상품 수정 중 에러가 발생하였습니다.");
+            model.addAttribute("bookDetail", bookFormDto);
+            return "item/itemUpdate";
+        }
+        return "redirect:/";
+    }
+
+    @GetMapping(value = {"/items", "/items/{page}"})
+    public String bookMangage(BookSearchDto bookSearchDto, @PathVariable("page")Optional<Integer> page, Model model) {
+        Pageable pageable = PageRequest.of(page.isPresent() ? page.get() : 0,3);
+        Page<Book> books =
+                bookService.getAdminBookPage(bookSearchDto, pageable);
+        model.addAttribute("books", books);
+        model.addAttribute("bookSearchDto", bookSearchDto);
+        model.addAttribute("maxPage", 5);
+        return "item/itemMng";
+    }
+
 }

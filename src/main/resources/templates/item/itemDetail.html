@@ -3,6 +3,11 @@
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
       layout:decorate="~{layouts/layout1}">
 
+<head>
+  <meta name="_csrf" th:content="${_csrf.token}"/>
+  <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
+</head>
+
 
 <th:block layout:fragment="css">
   <style>
@@ -13,11 +18,110 @@
 </th:block>
 <th:block layout:fragment="script">
   <script th:inline="javascript">
+    $(document).ready(function(){
+
+      calculateToalPrice();
+
+      $("#count").change( function(){
+        calculateToalPrice();
+      });
+    });
+
+    function calculateToalPrice(){
+      var count = $("#count").val();
+      var price = $("#price").val();
+      var totalPrice = price*count;
+      $("#totalPrice").html('총 상품금액' + totalPrice + '원');
+    }
+
+    function order(){
+
+      debugger
+      var token = $("meta[name='_csrf']").attr("content");
+      var header = $("meta[name='_csrf_header']").attr("content");
+
+      var url = "/order";
+      var paramData = {
+        bookId : $("#bookId").val(),
+        count : $("#count").val()
+      };
+
+      var param = JSON.stringify(paramData);
+
+      $.ajax({
+        url      : url,
+        type     : "POST",
+        contentType : "application/json",
+        data     : param,
+        beforeSend : function(xhr){
+          /* 데이터를 전송하기 전에 헤더에 csrf값을 설정 */
+          xhr.setRequestHeader(header, token);
+        },
+        dataType : "json",
+        cache   : false,
+        success  : function(result, status){
+          alert("주문이 완료 되었습니다.");
+          location.href='/';
+        },
+        error : function(jqXHR, status, error){
+
+          if(jqXHR.status == '401'){
+            alert('로그인 후 이용해주세요');
+            location.href='/members/login';
+          } else{
+            alert(jqXHR.responseText);
+          }
+
+        }
+      });
+    }
+
+    function addCart(){
+      var token = $("meta[name='_csrf']").attr("content");
+      var header = $("meta[name='_csrf_header']").attr("content");
+
+      var url = "/cart";
+      var paramData = {
+        bookId : $("#bookId").val(),
+        count : $("#count").val()
+      };
+
+      var param = JSON.stringify(paramData);
+
+      $.ajax({
+        url      : url,
+        type     : "POST",
+        contentType : "application/json",
+        data     : param,
+        beforeSend : function(xhr){
+          /* 데이터를 전송하기 전에 헤더에 csrf값을 설정 */
+          xhr.setRequestHeader(header, token);
+        },
+        dataType : "json",
+        cache   : false,
+        success  : function(result, status){
+          alert("상품을 장바구니에 담았습니다.");
+          location.href='/';
+        },
+        error : function(jqXHR, status, error){
+
+          if(jqXHR.status == '401'){
+            alert('로그인 후 이용해주세요');
+            location.href='/members/login';
+          } else{
+            alert(jqXHR.responseText);
+          }
+
+        }
+      });
+    }
 
   </script>
 </th:block>
 
+
 <div layout:fragment="content">
+  <input type="hidden" id="bookId" th:value="${bookDetail.id}">
   <section class="mt-5 p-3 container">
     <h3 class="text-center mb-3"><b th:text="${bookDetail.title}"></b></h3>
     <p class="text-center mb-5"><small class="text-secondary">저자</small> <span th:text="${bookDetail.author}" class="mr-3"></span>|<span th:text="${bookDetail.publisher}" class="ml-3"></span></p>
@@ -27,9 +131,15 @@
         <img th:src="${bookDetail.imageSrc}" style="width: 100%">
       </div>
       <div class="col-md-6 col-12">
-        <span class="badge badge-pill badge-light">무료배송</span>
-        <span class="badge badge-pill badge-light ml-2">소득공제</span> <br>
-        <h5 class="mt-3"><b th:text="${bookDetail.discount}" class="price"></b>원</h5>
+        <span th:if="${bookDetail.bookSellStatus == T(com.book.constant.BookSellStatus).SELL}" class="badge badge-primary mgb-15">
+                판매중
+            </span>
+        <span th:unless="${bookDetail.bookSellStatus == T(com.book.constant.BookSellStatus).SELL}" class="badge btn-danger mgb-15" >
+                품절
+            </span>
+        <span class="badge badge-pill badge-light mgb-15">무료배송</span>
+        <span class="badge badge-pill badge-light">소득공제</span> <br>
+        <h5 class="mt-3"><b th:text="${bookDetail.discount}" id="price" name="price" class="price"></b>원</h5>
 
         <p>
         <p  th:text="${bookDetail.description}" class="description"></p>
@@ -43,32 +153,31 @@
 
 
         <p><small>ISBN : </small><small th:text="${bookDetail.isbn}"></small></p>
-
+        <div class="input-group w-50">
+          <div class="input-group-prepend">
+            <span class="input-group-text">수량</span>
+          </div>
+          <input type="number" name="count" id="count" class="form-control" value="1" min="1">
+        </div>
       </div>
     </div>
     <div class="container-fluid text-center bg-light p-3 mt-4 fixed-bottom">
-      <span class="mt-3 mr-5">총 상품금액 <b th:text="${bookDetail.discount}" style="font-size: 20px" class="price"></b>원</span>
-      <form action="/user/item/cart" method="post">
-        <button type="submit" class="btn ml-5" style="background-color:rgb(103,167,47); color: white; width: 200px">장바구니</button>
-      </form>
-      <a href="/" class="btn ml-1" style="border:1px solid rgb(103,167,47); color: rgb(103,167,47); width: 200px">바로구매</a>
+      <span class="mt-3 mr-5 price" name="totalPrice" id="totalPrice" style="font-size: 20px"> </span>
+<!--      <form action="/user/item/cart" method="post">-->
+        <button type="submit" class="btn ml-5" style="background-color:rgb(103,167,47); color: white; width: 200px" onclick="addCart()">장바구니</button>
+        <button type="button" class="btn ml-1" style="border:1px solid rgb(103,167,47); color: rgb(103,167,47); width: 200px" onclick="order()">바로구매</button>
+<!--      </form>-->
     </div>
   </section>
   <script>
-    // let price_td = document.querySelector(".price")
-    //
-    // let price = price_td.innerHTML
-    // price *= 1
-    // if(price == 0) price_td.innerHTML = "절판"
-    // else price_td.innerHTML = price.toLocaleString()
     let price_td = document.querySelectorAll(".price")
 
     for(let i = 0; i<price_td.length; i++) {
-      let price = price_td[i].innerHTML
-      price *= 1
+      let txt_price = price_td[i].innerHTML
+      txt_price *= 1
 
-      if(price == 0) price_td[i].innerHTML = "절판"
-      else price_td[i].innerHTML = price.toLocaleString()
+      if(txt_price == 0) price_td[i].innerHTML = "절판"
+      else price_td[i].innerHTML = txt_price.toLocaleString()
     }
 
     let length = document.querySelector(".description").innerHTML.length

@@ -13,6 +13,54 @@
 
              <br>
 
+             <section class="mt-5 mb-5 container">
+                 <h3 class="mt-5 mb-4"><b>새로 추가된 상품</b></h3>
+
+                 <input type="hidden" name="searchQuery" th:value="${bookSearchDto.searchQuery}">
+                 <div th:if="${not #strings.isEmpty(bookSearchDto.searchQuery)}" class="center">
+                     <p class="h3 font-weight-bold" th:text="${bookSearchDto.searchQuery} + '검색 결과'"></p>
+                 </div>
+
+                 <div class="row">
+                     <th:block th:each="book, status: ${books.getContent()}">
+                         <div class="col-md-2 margin">
+                             <div class="card">
+                                 <a th:href="@{/book/detail/{bookId}(bookId=${book.id})}" class="text-dark">
+                                     <img th:src="${book.imageSrc}" class="card-img-top" th:alt="${book.title}" height="400">
+                                     <div class="card-body">
+                                         <h4 class="card-title">[[${book.title}]]</h4>
+                                         <p class="card-text">[[${book.description}]]</p>
+                                         <h3 class="card-title text-danger">[[${book.discount}]]원</h3>
+                                     </div>
+                                 </a>
+                             </div>
+                         </div>
+                     </th:block>
+                 </div>
+                 <div th:with="start=${(books.number/maxPage)*maxPage + 1}, end=(${(books.totalPages == 0) ? 1 : (start + (maxPage - 1) < books.totalPages ? start + (maxPage - 1) : books.totalPages)})" >
+                     <ul class="pagination justify-content-center">
+
+                         <li class="page-item" th:classappend="${books.number eq 0}?'disabled':''">
+                             <a th:href="@{'/' + '?searchQuery=' + ${bookSearchDto.searchQuery} + '&page=' + ${books.number - 1}}" aria-label='Previous' class="page-link">
+                                 <span aria-hidden='true'>Previous</span>
+                             </a>
+                         </li>
+
+                         <li class="page-item" th:each="page: ${#numbers.sequence(start, end)}" th:classappend="${books.number eq page - 1}?'active':''">
+                             <a th:href="@{'/' +'?searchQuery=' + ${bookSearchDto.searchQuery} + '&page=' + ${page - 1}}" th:inline="text" class="page-link">[[${page}]]</a>
+                         </li>
+
+                         <li class="page-item" th:classappend="${books.number+1 ge books.totalPages}?'disabled':''">
+                             <a th:href="@{'/' +'?searchQuery=' + ${bookSearchDto.searchQuery} + '&page=' + ${books.number+1}}" aria-label='Next' class="page-link">
+                                 <span aria-hidden='true'>Next</span>
+                             </a>
+                         </li>
+
+                     </ul>
+                 </div>
+             </section>
+
+
              <section class="mt-5 mb-5 container today_select">
                  <h3 class="mt-5"><b>오늘의 선택</b></h3>
                  <div class="row">
