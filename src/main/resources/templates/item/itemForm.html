@@ -258,7 +258,7 @@
         <td><a th:href="@{/user/book/detail/{id}(id=${status.index})}" th:text="${info.title}"></a></td>
         <td th:text="${info.author}"></td>
         <td th:text="${info.publisher}"></td>
-        <td th:text="${info.discount}" class="price"> </td>
+        <td th:text="${info.price}" class="price"> </td>
         <td>
           <button type="button" class="text-center btn btn-primary addBtn"  data-toggle="modal" data-target="#exampleModal">
             <!--            data-toggle="modal" data-target="#exampleModal"-->
@@ -331,7 +331,7 @@
 
         target.children[0].setAttribute("name","title");
         target.children[0].setAttribute("value",target.parentElement.parentElement.children[1].innerHTML);
-        target.children[1].setAttribute("name","discount");
+        target.children[1].setAttribute("name","price");
         target.children[1].setAttribute("value",target.parentElement.parentElement.children[4].innerHTML);
         target.children[2].setAttribute("name","imageSrc");
         target.children[2].setAttribute("value",imageSrc);

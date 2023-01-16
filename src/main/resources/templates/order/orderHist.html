@@ -91,7 +91,9 @@
     구매 이력
   </h2>
 
+
   <div th:each="order : ${orders.getContent()}">
+
 
     <div class="d-flex mb-3 align-self-center">
       <h4 th:text="${order.orderDate} + ' 주문'"></h4>
@@ -112,7 +114,7 @@
         <div class="align-self-center w-75">
           <span th:text="${orderBook.title}" class="fs24 font-weight-bold"></span>
           <div class="fs18 font-weight-light">
-            <span th:text="${orderBook.discount} +'원'"></span>
+            <span th:text="${orderBook.orderPrice} +'원'"></span>
             <span th:text="${orderBook.count} +'개'"></span>
           </div>
         </div>
@@ -142,6 +144,7 @@
 
     </ul>
   </div>
+
 
 </div>
 

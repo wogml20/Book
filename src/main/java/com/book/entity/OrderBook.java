@@ -24,23 +24,23 @@ public class OrderBook extends BaseEntity{
 
     private int orderPrice;
 
-    private Integer count;
+    private int count;
 
     public static OrderBook createOrderBook(Book book, int count) {
         OrderBook orderBook = new OrderBook();
         orderBook.setBook(book);
         orderBook.setCount(count);
-        orderBook.setOrderPrice(book.getDiscount());
-
+        orderBook.setOrderPrice(book.getPrice());
         book.removeStock(count);
         return orderBook;
     }
-
-    public int getTotalDiscount() {
-        return orderPrice * count;
-    }
+    
 
     public void cancel() {
         this.getBook().addStock(count);
+    }
+
+    public int getTotalPrice() {
+        return orderPrice*count;
     }
 }

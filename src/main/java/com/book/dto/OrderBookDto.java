@@ -11,12 +11,12 @@ public class OrderBookDto {
     private String title;           //제목
     private String imageSrc;        //첵 표지
     private int count;              //주문 수량
-    private Integer discount;        //가격
+    private int orderPrice;        //가격
 
     public OrderBookDto (OrderBook orderBook) {
         this.title = orderBook.getBook().getTitle();
         this.count = orderBook.getCount();
-        this.discount = orderBook.getOrderPrice();
+        this.orderPrice = orderBook.getOrderPrice();
         this.imageSrc = orderBook.getBook().getImageSrc();
     }
 }

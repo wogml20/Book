@@ -22,15 +22,15 @@
 
       calculateToalPrice();
 
-      $("#stockNumber").change( function(){
+      $("#count").change( function(){
         calculateToalPrice();
       });
     });
 
     function calculateToalPrice(){
-      var stockNumber = $("#stockNumber").val();
+      var count = $("#count").val();
       var price = $("#price").val();
-      var totalPrice = price*stockNumber;
+      var totalPrice = price*count;
       $("#totalPrice").html('총 상품금액' + totalPrice + '원');
     }
 
@@ -43,7 +43,7 @@
       var url = "/order";
       var paramData = {
         bookId : $("#bookId").val(),
-        stockNumber : $("#stockNumber").val()
+        count : $("#count").val()
       };
 
       var param = JSON.stringify(paramData);
@@ -83,7 +83,7 @@
       var url = "/cart";
       var paramData = {
         bookId : $("#bookId").val(),
-        stockNumber : $("#stockNumber").val()
+        count : $("#count").val()
       };
 
       var param = JSON.stringify(paramData);
@@ -139,7 +139,7 @@
             </span>
         <span class="badge badge-pill badge-light mgb-15">무료배송</span>
         <span class="badge badge-pill badge-light">소득공제</span> <br>
-        <h5 class="mt-3"><b th:text="${bookDetail.discount}" id="price" name="price" class="price"></b>원</h5>
+        <h5 class="mt-3"><b th:text="${bookDetail.price}" id="price" name="price" class="price"></b>원</h5>
 
         <p>
         <p  th:text="${bookDetail.description}" class="description"></p>
@@ -157,7 +157,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">수량</span>
           </div>
-          <input type="number" name="stockNumber" id="stockNumber" class="form-control" value="1" min="1">
+          <input type="number" name="count" id="count" class="form-control" value="1" min="1">
         </div>
       </div>
     </div>

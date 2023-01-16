@@ -40,7 +40,7 @@ public class OrderService {
 
         List<OrderBook> orderBookList = new ArrayList<>();
         OrderBook orderBook =
-                OrderBook.createOrderBook(book, orderDto.getStockNumber());
+                OrderBook.createOrderBook(book, orderDto.getCount());
         orderBookList.add(orderBook);
 
         Order order = Order.createOrder(member, orderBookList);
@@ -90,16 +90,16 @@ public class OrderService {
         order.cancelOrder();
     }
 
-    public Long orders(List<OrderDto> orderDtoList, String email){
+    public Long orders(List<OrderDto> orderDtoList, String userid){
 
-        Member member = memberRepository.findByEmail(email);
+        Member member = memberRepository.findByUserid(userid);
         List<OrderBook> orderBookList = new ArrayList<>();
 
         for (OrderDto orderDto : orderDtoList) {
             Book book = bookRepository.findById(orderDto.getBookId())
                     .orElseThrow(EntityNotFoundException::new);
 
-            OrderBook orderBook = OrderBook.createOrderBook(book, orderDto.getStockNumber());
+            OrderBook orderBook = OrderBook.createOrderBook(book, orderDto.getCount());
             orderBookList.add(orderBook);
         }
 

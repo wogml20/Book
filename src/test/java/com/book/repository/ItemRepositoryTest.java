@@ -28,7 +28,7 @@
 //        Item item = new Item();
 //
 //        item.setTitle("테스트 상품");
-//        item.setDiscount(10000);
+//        item.setprice(10000);
 //        item.setStockNumber(100);
 //        item.setDescription("테스트 상품 상세 설명");
 //        Item savedBook = itemRepository.save(item);

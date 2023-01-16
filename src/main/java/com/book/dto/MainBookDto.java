@@ -15,12 +15,12 @@ public class MainBookDto {
     private String imageSrc;        //첵 표지
     private String author;          //작가
     private String isbn;            //isbn
-    private Integer discount;        //가격
+    private int price;        //가격
     private String publisher;       // 출판사
     private String description;     //상세 설명
 
     @QueryProjection
-    public MainBookDto(Long id, String title, String description, String imageSrc, String author, String isbn, String publisher, Integer discount) {
+    public MainBookDto(Long id, String title, String description, String imageSrc, String author, String isbn, String publisher, int price) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -28,6 +28,6 @@ public class MainBookDto {
         this.isbn = isbn;
         this.author = author;
         this.publisher = publisher;
-        this.discount = discount;
+        this.price = price;
     }
 }

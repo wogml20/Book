@@ -41,7 +41,7 @@ class OrderTest {
         book.setImageSrc("테스트");
         book.setAuthor("김영하");
         book.setIsbn("12343");
-        book.setDiscount(1000);
+        book.setprice(1000);
         book.setPublisher("길벗");
         book.setDescription("테스트 상세설명");
         book.setBookSellStatus(BookSellStatus.SELL);

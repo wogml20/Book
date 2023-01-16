@@ -29,7 +29,7 @@ class BookRepositoryTest {
         book.setAuthor("김영하");
         book.setStockNumber(100);
         book.setIsbn("1234324");
-        book.setDiscount(10000);
+        book.setprice(10000);
         book.setPublisher("길벗");
         book.setDescription("테스트 상품 상세 설명");
         book.setBookSellStatus(BookSellStatus.SELL);
@@ -44,7 +44,7 @@ class BookRepositoryTest {
         for(int i = 1; i<=10; i++) {
             Book book = new Book();
             book.setTitle("테스트 상품" + i);
-            book.setDiscount(10000 + i);
+            book.setprice(10000 + i);
             book.setDescription("테스트 상품 상세 설명" + i);
             Book savedBook = bookRepository.save(book);
         }
@@ -74,7 +74,7 @@ class BookRepositoryTest {
 //    @DisplayName("가격 LessThan 테스트")
 //    public void findByPriceLessThan() {
 //        this.createBookList();
-//        List<Book> bookList = bookRepository.findByDiscountLessThan(10005);
+//        List<Book> bookList = bookRepository.findBypriceLessThan(10005);
 //        for (Book book : bookList) {
 //            System.out.println(book.toString());
 //        }
@@ -84,7 +84,7 @@ class BookRepositoryTest {
 //    @DisplayName("가격 내림차순 조회 테스트")
 //    public void findByPriceLessThanOrderByPriceDesc() {
 //        this.createBookList();
-//        List<Book> bookList = bookRepository.findByDiscountLessThanOrderByDiscountDesc(10005);
+//        List<Book> bookList = bookRepository.findBypriceLessThanOrderBypriceDesc(10005);
 //        for (Book book : bookList) {
 //            System.out.println(book.toString());
 //        }
@@ -94,7 +94,7 @@ class BookRepositoryTest {
 //    @DisplayName("@Query를 이용한 상품 조회 테스트")
 //    public void findByBookDetailTest() {
 //        this.createBookList();
-//        List<Book> bookList = bookRepository.findByDiscountLessThanOrderByDiscountDesc(10005);
+//        List<Book> bookList = bookRepository.findBypriceLessThanOrderBypriceDesc(10005);
 //        for (Book book : bookList) {
 //            System.out.println(book.toString());
 //        }

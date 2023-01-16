@@ -37,7 +37,7 @@
         <span th:unless="${bookDetail.bookSellStatus == T(com.book.constant.BookSellStatus).SELL}" class="badge btn-danger mgb-15" >
                 품절
             </span>
-        <h5 class="mt-3"><b th:text="${bookDetail.discount}" class="price"></b>원</h5>
+        <h5 class="mt-3"><b th:text="${bookDetail.price}" class="price"></b>원</h5>
 
         <p>
         <p  th:text="${bookDetail.description}" class="description"></p>
@@ -55,7 +55,7 @@
       </div>
     </div>
     <div class="container-fluid text-center bg-light p-3 mt-4 fixed-bottom">
-      <span class="mt-3 mr-5">총 상품금액 <b th:text="${bookDetail.discount}" style="font-size: 20px" class="price"></b>원</span>
+      <span class="mt-3 mr-5">총 상품금액 <b th:text="${bookDetail.price}" style="font-size: 20px" class="price"></b>원</span>
       <form action="/user/item/cart" method="post">
         <button type="submit" class="btn ml-5" style="background-color:rgb(103,167,47); color: white; width: 200px">장바구니</button>
       </form>

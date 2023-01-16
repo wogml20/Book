@@ -11,15 +11,11 @@ import java.util.List;
 public interface BookRepository extends JpaRepository<Book, Long>, QuerydslPredicateExecutor<Book>, BookRepositoryCustom {
 
     List<Book> findByTitle(String title);
-    List<Book> findByTitleOrDescription(String title, String description);
-    List<Book> findByDiscountLessThan(Integer discount);
-    List<Book> findByDiscountLessThanOrderByDiscountDesc(Integer discount);
 
     List<Book> findByTitleContaining(String title);
 
     List<Book> findAll();
 
-
-    @Query("select i from Book i where i.description like %:description% order by i.discount desc")
+    @Query("select i from Book i where i.description like %:description% order by i.price desc")
     List<Book> findByDescription(@Param("description") String description);
 }

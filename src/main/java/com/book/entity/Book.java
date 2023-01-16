@@ -38,12 +38,12 @@ public class Book extends BaseEntity{
     private String author;          //작가
 
     @Column(nullable = false)
-    private int stockNumber;
+    private int count;
 
     private String isbn;            //isbn
 
     @Column(name = "price", nullable = false)
-    private int discount;        //가격
+    private int price;        //가격
 
     private String publisher;       // 출판사
 
@@ -62,7 +62,7 @@ public class Book extends BaseEntity{
             book.setImageSrc(String.valueOf(bookDtos.get(i).getImageSrc()));
             book.setAuthor(String.valueOf(bookDtos.get(i).getAuthor()));
             book.setIsbn(String.valueOf(bookDtos.get(i).getIsbn()));
-            book.setDiscount((bookDtos.get(i).getDiscount()));
+            book.setPrice((bookDtos.get(i).getPrice()));
             book.setPublisher(String.valueOf(bookDtos.get(i).getPublisher()));
             book.setDescription(String.valueOf(bookDtos.get(i).getDescription()));
 
@@ -73,25 +73,25 @@ public class Book extends BaseEntity{
     public void updateBook(BookFormDto bookFormDto) {
         this.title = bookFormDto.getTitle();
         this.imageSrc = bookFormDto.getImageSrc();
-        this.discount = bookFormDto.getDiscount();
+        this.price = bookFormDto.getPrice();
         this.author = bookFormDto.getAuthor();
         this.description = bookFormDto.getDescription();
         this.isbn = bookFormDto.getIsbn();
         this.bookSellStatus = bookFormDto.getBookSellStatus();
         this.publisher = bookFormDto.getPublisher();
-        this.stockNumber = bookFormDto.getStockNumber();
+        this.count = bookFormDto.getCount();
 
     }
 
-    public void removeStock(int stockNumber) {
-        int restStock = this.stockNumber - stockNumber;
+    public void removeStock(int count) {
+        int restStock = this.count - count;
         if(restStock < 0) {
-            throw new OutOfStockException("상품의 재고가 부족합니다. (현재 재고 수량: " + this.stockNumber + ")");
+            throw new OutOfStockException("상품의 재고가 부족합니다. (현재 재고 수량: " + this.count + ")");
         }
-        this.stockNumber = restStock;
+        this.count = restStock;
     }
 
-    public void addStock(int stockNumber) {
-        this.stockNumber += stockNumber;
+    public void addStock(int count) {
+        this.count += count;
     }
 }

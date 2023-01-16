@@ -12,7 +12,7 @@ public class BookDto {
     private String imageSrc;        //첵 표지
     private String author;          //작가
     private String isbn;            //isbn
-    private Integer discount;        //가격
+    private int price;        //가격
     private String publisher;       // 출판사
     private String description;     //상세 설명
 

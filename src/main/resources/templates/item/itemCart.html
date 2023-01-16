@@ -29,8 +29,8 @@
         <tr th:each="cartdto:${cartDtos}">
             <th><img th:src="${cartdto.imageSrc}" style="width: 65px"; height="95px"></th>
             <td th:text="${cartdto.title}"></td>
-            <td><input type="number" th:value="${cartdto.stockNumber}" name="stockNumber"></td>
-            <td th:text="${cartdto.discount}" class="price"></td>
+            <td><input type="number" th:value="${cartdto.count}" name="count"></td>
+            <td th:text="${cartdto.price}" class="price"></td>
 
             <td>
                 <button class="btn btn-primary changeBtn" type="button"><input type="hidden" class="hiddenValue">변경하기</button>

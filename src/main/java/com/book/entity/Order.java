@@ -51,10 +51,10 @@ public class Order extends BaseEntity{
         return order;
     }
 
-    public int getTotalDiscount() {
+    public int getTotalPrice() {
         int totalPrice = 0;
         for(OrderBook orderBook : orderBooks) {
-            totalPrice += orderBook.getTotalDiscount();
+            totalPrice += orderBook.getTotalPrice();
         }
         return totalPrice;
     }

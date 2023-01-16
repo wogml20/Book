@@ -48,7 +48,7 @@
         <td th:text="${info.title}"></td>
         <td th:text="${info.author}"></td>
         <td th:text="${info.publisher}"></td>
-        <td th:text="${info.discount}"> </td>
+        <td th:text="${info.price}"> </td>
         <td>
           <button type="button" class="text-center btn btn-primary addBtn"  data-toggle="modal" data-target="#exampleModal">
 <!--            data-toggle="modal" data-target="#exampleModal"-->
@@ -120,7 +120,7 @@
 
         target.children[0].setAttribute("name","title");
         target.children[0].setAttribute("value",target.parentElement.parentElement.children[1].innerHTML);
-        target.children[1].setAttribute("name","discount");
+        target.children[1].setAttribute("name","price");
         target.children[1].setAttribute("value",target.parentElement.parentElement.children[4].innerHTML);
         target.children[2].setAttribute("name","imageSrc");
         target.children[2].setAttribute("value",imageSrc);

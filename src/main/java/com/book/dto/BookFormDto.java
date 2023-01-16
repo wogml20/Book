@@ -18,11 +18,11 @@ public class BookFormDto {
 
     private String author;          //작가
 
-    private Integer stockNumber;
+    private int count;
 
     private String isbn;            //isbn
 
-    private Integer discount;        //가격
+    private int price;        //가격
 
     private String publisher;       // 출판사
 

@@ -17,7 +17,7 @@ public class CartDto {
 
 //    private String title;           //제목
 //    private String imageSrc;        //첵 표지
-//    private Integer discount;        //가격
+//    private Integer price;        //가격
 //    private Integer stockNumber;        //재고
 
 
@@ -29,11 +29,11 @@ public class CartDto {
     private String imageSrc;        //첵 표지
     private String author;          //작가
     private String isbn;            //isbn
-    private Integer discount;        //가격
+    private int price;        //가격
     private String publisher;       // 출판사
     private String description;     //상세 설명
 
     @Min(value=1, message = "최소 1개 이상 담아주세요")
-    private Integer stockNumber;
+    private int count;
 }
 

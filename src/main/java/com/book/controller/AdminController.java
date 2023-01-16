@@ -112,8 +112,8 @@ public class AdminController {
     @PostMapping("/item/add")
     public String bookAdd(@Valid BookFormDto bookFormDto, BindingResult bindingResult, Model model, HttpServletRequest httpServletRequest) throws Exception {
 
-        Integer stockNumber = Integer.valueOf(httpServletRequest.getParameter("stockNumber"));
-        Integer discount = Integer.valueOf(httpServletRequest.getParameter("discount"));
+        int count = Integer.valueOf(httpServletRequest.getParameter("count"));
+        int price = Integer.valueOf(httpServletRequest.getParameter("price"));
         String title = httpServletRequest.getParameter("title");
         String author = httpServletRequest.getParameter("author");
         String publisher = httpServletRequest.getParameter("publisher");
@@ -134,8 +134,8 @@ public class AdminController {
             bookFormDto.setAuthor(author);
             bookFormDto.setIsbn(isbn);
             bookFormDto.setPublisher(publisher);
-            bookFormDto.setStockNumber(stockNumber);
-            bookFormDto.setDiscount(discount);
+            bookFormDto.setCount(count);
+            bookFormDto.setPrice(price);
             bookFormDto.setDescription(description);
 
             bookService.saveBook(bookFormDto);
@@ -163,8 +163,8 @@ public class AdminController {
     @PostMapping(value = "/update/{bookId}")
     public String bookUpdate(@Valid BookFormDto bookFormDto, BindingResult bindingResult, @PathVariable("bookId") Long bookId, Model model, HttpServletRequest httpServletRequest) {
 
-        Integer stockNumber = Integer.valueOf(httpServletRequest.getParameter("stockNumber"));
-        Integer discount = Integer.valueOf(httpServletRequest.getParameter("discount"));
+        Integer count = Integer.valueOf(httpServletRequest.getParameter("count"));
+        Integer price = Integer.valueOf(httpServletRequest.getParameter("price"));
         String title = httpServletRequest.getParameter("title");
         String author = httpServletRequest.getParameter("author");
         String publisher = httpServletRequest.getParameter("publisher");
@@ -179,9 +179,9 @@ public class AdminController {
         bookFormDto.setAuthor(author);
         bookFormDto.setIsbn(isbn);
         bookFormDto.setPublisher(publisher);
-        bookFormDto.setStockNumber(stockNumber);
+        bookFormDto.setCount(count);
         bookFormDto.setBookSellStatus(BookSellStatus.valueOf(bookSellStatus));
-        bookFormDto.setDiscount(discount);
+        bookFormDto.setPrice(price);
         bookFormDto.setDescription(description);
 
         if(bindingResult.hasErrors()) {

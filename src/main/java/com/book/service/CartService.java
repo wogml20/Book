@@ -54,10 +54,10 @@ public class CartService {
         CartBook savedCartBook = cartBookRepository.findByCartIdAndBookId(cart.getId(), book.getId());
 
         if(savedCartBook != null) {
-            savedCartBook.addCount(cartBookDto.getStockNumber());
+            savedCartBook.addCount(cartBookDto.getCount());
             return savedCartBook.getId();
         }else {
-            CartBook cartBook = CartBook.createCartBook(cart, book, cartBookDto.getStockNumber());
+            CartBook cartBook = CartBook.createCartBook(cart, book, cartBookDto.getCount());
             cartBookRepository.save(cartBook);
             return cartBook.getId();
         }
@@ -116,7 +116,7 @@ public class CartService {
 
             OrderDto orderDto = new OrderDto();
             orderDto.setBookId(cartBook.getBook().getId());
-            orderDto.setStockNumber(cartBook.getStockNumber());
+            orderDto.setCount(cartBook.getCount());
             orderDtoList.add(orderDto);
         }
 

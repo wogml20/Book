@@ -94,7 +94,7 @@ public class BookRepositoryCustomImpl implements BookRepositoryCustom {
                                 book.author,
                                 book.isbn,
                                 book.publisher,
-                                book.discount)
+                                book.price)
                 )
                 .from(book)
                 .where(titleLike((bookSearchDto.getSearchQuery())))

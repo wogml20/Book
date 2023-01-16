@@ -107,7 +107,7 @@ public class UserController {
         log.info("total = " + total);
 
 //        for(int i = 0; i<items.length(); i++) {
-//            bookInfos.add(new BookDto((String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author"),(String) items.getJSONObject(i).get("isbn"),Integer.parseInt((String) items.getJSONObject(i).get("discount")), (String) items.getJSONObject(i).get("publisher"),(String) items.getJSONObject(i).get("description")));
+//            bookInfos.add(new BookDto((String) items.getJSONObject(i).get("title"), (String) items.getJSONObject(i).get("link"),(String) items.getJSONObject(i).get("image"),(String) items.getJSONObject(i).get("author"),(String) items.getJSONObject(i).get("isbn"),Integer.parseInt((String) items.getJSONObject(i).get("price")), (String) items.getJSONObject(i).get("publisher"),(String) items.getJSONObject(i).get("description")));
 //        }
 //
 //        model.addAttribute("total",total);
@@ -134,23 +134,23 @@ public class UserController {
 ////        Integer stockNumber = Integer.valueOf(httpServletRequest.getParameter("stockNumber"));
 //        String index = httpServletRequest.getParameter("index");
 //        String title = httpServletRequest.getParameter("title");
-////        String discount_t = httpServletRequest.getParameter("discount");
+////        String price_t = httpServletRequest.getParameter("price");
 ////        String imageSrc = httpServletRequest.getParameter("imageSrc");
 //
 ////        log.info("수량 선택 ============= " + stockNumber);
 //        log.info("선택한 id ============= " + index);
 //        log.info("선택한 title ============= " + title);
-////        log.info("선택한 discount ============= " + discount_t);
+////        log.info("선택한 price ============= " + price_t);
 ////        log.info("선택한 imageSrc ============= " + imageSrc);
 //
 //
 //        Integer i = Integer.parseInt(index);
 //
-////        Integer discount = Integer.parseInt(discount_t);
+////        Integer price = Integer.parseInt(price_t);
 ////        Integer stockNumber = Integer.parseInt(query_stock_number);
 //
 //////
-////        cartDtoList.add((new CartDto(title, imageSrc, discount, 1)));
+////        cartDtoList.add((new CartDto(title, imageSrc, price, 1)));
 //        cartDtoList.add(bookInfos.get(i));
 ////
 //        try {
@@ -173,7 +173,7 @@ public class UserController {
     @PostMapping("/item/update")
     public String itemUpdate(HttpServletRequest httpServletRequest, Model model) throws Exception {
 
-        Integer stockNumber = Integer.valueOf(httpServletRequest.getParameter("stockNumber"));
+        int count = Integer.valueOf(httpServletRequest.getParameter("count"));
         log.info(httpServletRequest.getParameter("index"));
 //        cartDtoList.get(index).setStockNumber(stockNumber);
 //        cart = Cart.cartAddBook(cartDtoList.get(index));
