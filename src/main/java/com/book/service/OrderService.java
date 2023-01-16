@@ -40,7 +40,7 @@ public class OrderService {
 
         List<OrderBook> orderBookList = new ArrayList<>();
         OrderBook orderBook =
-                OrderBook.createOrderBook(book, orderDto.getCount());
+                OrderBook.createOrderBook(book, orderDto.getStockNumber());
         orderBookList.add(orderBook);
 
         Order order = Order.createOrder(member, orderBookList);
@@ -99,7 +99,7 @@ public class OrderService {
             Book book = bookRepository.findById(orderDto.getBookId())
                     .orElseThrow(EntityNotFoundException::new);
 
-            OrderBook orderBook = OrderBook.createOrderBook(book, orderDto.getCount());
+            OrderBook orderBook = OrderBook.createOrderBook(book, orderDto.getStockNumber());
             orderBookList.add(orderBook);
         }
 

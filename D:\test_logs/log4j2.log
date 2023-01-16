@@ -6676,3 +6676,713 @@ org.springframework.expression.spel.SpelEvaluationException: EL1008E: Property o
 2023-01-16 01:23:53 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([publish12_0_0_] : [VARCHAR]) - [나무옆의자]
 2023-01-16 01:23:53 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([stock_n13_0_0_] : [INTEGER]) - [50]
 2023-01-16 01:23:53 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([title14_0_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-16 01:25:28  WARN [com.zaxxer.hikari.pool.HikariPool] HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s963ms).
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [rlaalstjr]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i1_3_] : [BIGINT]) - [7]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([address6_3_] : [VARCHAR]) - [서울시]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([email7_3_] : [VARCHAR]) - [rlaalstjr@email.com]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([name8_3_] : [VARCHAR]) - [김민석]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([password9_3_] : [VARCHAR]) - [$2a$10$omnX8roWrjGylh6xEKiso.CzCfiBe2jYxrVHTgb7qmc8OqrsButme]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([role10_3_] : [VARCHAR]) - [USER]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([userid11_3_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [7]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([cart_id1_1_] : [BIGINT]) - [8]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_1_] : [TIMESTAMP]) - [2023-01-16T00:39:39.267124]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_1_] : [TIMESTAMP]) - [2023-01-16T00:39:39.267124]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_1_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_1_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i6_1_] : [BIGINT]) - [7]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [8]
+2023-01-16 01:25:28 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [2] as [BIGINT] - [5]
+2023-01-16 01:25:29 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [TIMESTAMP] - [2023-01-16T01:25:28.995630]
+2023-01-16 01:25:29 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [2] as [TIMESTAMP] - [2023-01-16T01:25:28.995630]
+2023-01-16 01:25:29 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [3] as [VARCHAR] - [rlaalstjr]
+2023-01-16 01:25:29 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [4] as [VARCHAR] - [rlaalstjr]
+2023-01-16 01:25:29 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [5] as [BIGINT] - [5]
+2023-01-16 01:25:29 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [6] as [BIGINT] - [8]
+2023-01-16 01:25:29 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [7] as [INTEGER] - [1]
+2023-01-16 01:25:29 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [8] as [BIGINT] - [20]
+2023-01-16 01:25:29  WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] SQL Error: 1364, SQLState: HY000
+2023-01-16 01:25:29 ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] Field 'count' doesn't have a default value
+2023-01-16 01:25:29  INFO [org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl] HHH000010: On release of batch it still contained JDBC statements
+2023-01-16 01:25:29  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-16 01:25:29  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2023-01-16 01:25:29  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2023-01-16 15:33:36  INFO [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-16 15:33:36  INFO [com.book.BookApplication] Starting BookApplication using Java 11.0.17 on gimjaehuis-MacBook-Pro.local with PID 72182 (/Users/kimjaehee/Project/book/Book/build/classes/java/main started by kimjaehee in /Users/kimjaehee/Project/book/Book)
+2023-01-16 15:33:36  INFO [com.book.BookApplication] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 15:33:36  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-16 15:33:36  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-16 15:33:36  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-16 15:33:36  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 34 ms. Found 6 JPA repository interfaces.
+2023-01-16 15:33:36  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2023-01-16 15:33:36  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-16 15:33:36  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2023-01-16 15:33:36  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-16 15:33:36  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2023-01-16 15:33:36  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 795 ms
+2023-01-16 15:33:37  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2023-01-16 15:33:37  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2023-01-16 15:33:37  INFO [org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true'
+2023-01-16 15:33:37  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-16 15:33:37  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-01-16 15:33:37  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-16 15:33:37  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-01-16 15:33:37  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-16 15:33:37  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-16 15:33:37  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-16 15:33:38  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-16 15:33:38  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/css/**']
+2023-01-16 15:33:38  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-16 15:33:38  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/js/**']
+2023-01-16 15:33:38  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/img/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-16 15:33:38  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/img/**']
+2023-01-16 15:33:38  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@37c89a42, org.springframework.security.web.session.ForceEagerSessionCreationFilter@4552f2ed, org.springframework.security.web.session.ForceEagerSessionCreationFilter@1f760afd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5663e699, org.springframework.security.web.context.SecurityContextPersistenceFilter@5f776998, org.springframework.security.web.header.HeaderWriterFilter@7ffe47d6, org.springframework.security.web.csrf.CsrfFilter@704a6aca, org.springframework.security.web.authentication.logout.LogoutFilter@5b79141c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3ee18865, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4980264e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7dae7b9f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5158edc3, org.springframework.security.web.session.SessionManagementFilter@6ecf7364, org.springframework.security.web.access.ExceptionTranslationFilter@718da1c5, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@340046a2]
+2023-01-16 15:33:38  INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2023-01-16 15:33:38  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-16 15:33:38  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-16 15:33:38  INFO [com.book.BookApplication] Started BookApplication in 2.685 seconds (JVM running for 3.267)
+2023-01-16 15:34:06  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-16 15:34:06  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2023-01-16 15:34:06  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [6]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설...]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 2 2 (단골손님을 찾습니다 | 이미예 장편소설)]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [100만 독자를 사로잡은 《달러구트 꿈 백화점》, 그 두 번째 이야기
+
+어느덧 페니가 달러구트 꿈 백화점에서 일한 지도 1년이 넘었다.
+재고가 부족한 꿈을 관리하고, 꿈값 창고에서 감정으로 가득 찬 병을 옮기고, 프런트의 수많은 눈꺼풀 저울을 관리하는 일에 능숙해진 페니는 자신감이 넘친다. 게다가 꿈 산업 종사자로 인정을 받아야만 드나들 수 있는 ‘컴퍼니 ...]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3247609/32476096623.20221019153025.jpg]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165343729]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-16 15:34:06  WARN [nz.net.ultraq.thymeleaf.layoutdialect.fragments.FragmentProcessor] You don't need to put the layout:fragment/data-layout-fragment attribute into the <head> section - the decoration process will automatically copy the <head> section of your content templates into your layout page.
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [6]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설...]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 2 2 (단골손님을 찾습니다 | 이미예 장편소설)]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [100만 독자를 사로잡은 《달러구트 꿈 백화점》, 그 두 번째 이야기
+
+어느덧 페니가 달러구트 꿈 백화점에서 일한 지도 1년이 넘었다.
+재고가 부족한 꿈을 관리하고, 꿈값 창고에서 감정으로 가득 찬 병을 옮기고, 프런트의 수많은 눈꺼풀 저울을 관리하는 일에 능숙해진 페니는 자신감이 넘친다. 게다가 꿈 산업 종사자로 인정을 받아야만 드나들 수 있는 ‘컴퍼니 ...]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3247609/32476096623.20221019153025.jpg]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165343729]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-16 15:34:06 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [6]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설...]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 2 2 (단골손님을 찾습니다 | 이미예 장편소설)]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [100만 독자를 사로잡은 《달러구트 꿈 백화점》, 그 두 번째 이야기
+
+어느덧 페니가 달러구트 꿈 백화점에서 일한 지도 1년이 넘었다.
+재고가 부족한 꿈을 관리하고, 꿈값 창고에서 감정으로 가득 찬 병을 옮기고, 프런트의 수많은 눈꺼풀 저울을 관리하는 일에 능숙해진 페니는 자신감이 넘친다. 게다가 꿈 산업 종사자로 인정을 받아야만 드나들 수 있는 ‘컴퍼니 ...]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3247609/32476096623.20221019153025.jpg]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165343729]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-16 15:34:13 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [6]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설...]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 2 2 (단골손님을 찾습니다 | 이미예 장편소설)]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [100만 독자를 사로잡은 《달러구트 꿈 백화점》, 그 두 번째 이야기
+
+어느덧 페니가 달러구트 꿈 백화점에서 일한 지도 1년이 넘었다.
+재고가 부족한 꿈을 관리하고, 꿈값 창고에서 감정으로 가득 찬 병을 옮기고, 프런트의 수많은 눈꺼풀 저울을 관리하는 일에 능숙해진 페니는 자신감이 넘친다. 게다가 꿈 산업 종사자로 인정을 받아야만 드나들 수 있는 ‘컴퍼니 ...]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3247609/32476096623.20221019153025.jpg]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165343729]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-16 15:34:19 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [rlaalstjr]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i1_3_] : [BIGINT]) - [7]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([address6_3_] : [VARCHAR]) - [서울시]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([email7_3_] : [VARCHAR]) - [rlaalstjr@email.com]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([name8_3_] : [VARCHAR]) - [김민석]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([password9_3_] : [VARCHAR]) - [$2a$10$omnX8roWrjGylh6xEKiso.CzCfiBe2jYxrVHTgb7qmc8OqrsButme]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([role10_3_] : [VARCHAR]) - [USER]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([userid11_3_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [6]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_0_0_] : [TIMESTAMP]) - [2023-01-16T00:34:49.270870]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_0_0_] : [TIMESTAMP]) - [2023-01-16T00:34:49.270870]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_0_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_0_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([author6_0_0_] : [VARCHAR]) - [김영하]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([book_sel7_0_0_] : [VARCHAR]) - [SELL]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([descript8_0_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([price9_0_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([img10_0_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([isbn11_0_0_] : [VARCHAR]) - [9791191114225]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([publish12_0_0_] : [VARCHAR]) - [복복서가]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([stock_n13_0_0_] : [INTEGER]) - [50]
+2023-01-16 15:34:22 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([title14_0_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [6]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_0_0_] : [TIMESTAMP]) - [2023-01-16T00:34:49.270870]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_0_0_] : [TIMESTAMP]) - [2023-01-16T00:34:49.270870]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_0_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_0_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([author6_0_0_] : [VARCHAR]) - [김영하]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([book_sel7_0_0_] : [VARCHAR]) - [SELL]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([descript8_0_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([price9_0_0_] : [INTEGER]) - [12600]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([img10_0_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([isbn11_0_0_] : [VARCHAR]) - [9791191114225]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([publish12_0_0_] : [VARCHAR]) - [복복서가]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([stock_n13_0_0_] : [INTEGER]) - [50]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([title14_0_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [rlaalstjr]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i1_3_] : [BIGINT]) - [7]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([address6_3_] : [VARCHAR]) - [서울시]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([email7_3_] : [VARCHAR]) - [rlaalstjr@email.com]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([name8_3_] : [VARCHAR]) - [김민석]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([password9_3_] : [VARCHAR]) - [$2a$10$omnX8roWrjGylh6xEKiso.CzCfiBe2jYxrVHTgb7qmc8OqrsButme]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([role10_3_] : [VARCHAR]) - [USER]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([userid11_3_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [7]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([cart_id1_1_] : [BIGINT]) - [8]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_1_] : [TIMESTAMP]) - [2023-01-16T00:39:39.267124]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_1_] : [TIMESTAMP]) - [2023-01-16T00:39:39.267124]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_1_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_1_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i6_1_] : [BIGINT]) - [7]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [8]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [2] as [BIGINT] - [6]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [TIMESTAMP] - [2023-01-16T15:34:26.979304]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [2] as [TIMESTAMP] - [2023-01-16T15:34:26.979304]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [3] as [VARCHAR] - [rlaalstjr]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [4] as [VARCHAR] - [rlaalstjr]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [5] as [BIGINT] - [6]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [6] as [BIGINT] - [8]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [7] as [INTEGER] - [1]
+2023-01-16 15:34:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [8] as [BIGINT] - [21]
+2023-01-16 15:34:27  WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] SQL Error: 1364, SQLState: HY000
+2023-01-16 15:34:27 ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] Field 'count' doesn't have a default value
+2023-01-16 15:34:27  INFO [org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl] HHH000010: On release of batch it still contained JDBC statements
+2023-01-16 15:37:00  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-16 15:37:00  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2023-01-16 15:37:00  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2023-01-16 15:37:38  INFO [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-16 15:37:38  INFO [com.book.BookApplication] Starting BookApplication using Java 11.0.17 on gimjaehuis-MacBook-Pro.local with PID 74561 (/Users/kimjaehee/Project/book/Book/build/classes/java/main started by kimjaehee in /Users/kimjaehee/Project/book/Book)
+2023-01-16 15:37:38  INFO [com.book.BookApplication] No active profile set, falling back to 1 default profile: "default"
+2023-01-16 15:37:38  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-16 15:37:38  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-16 15:37:39  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-16 15:37:39  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 29 ms. Found 6 JPA repository interfaces.
+2023-01-16 15:37:39  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2023-01-16 15:37:39  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-16 15:37:39  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2023-01-16 15:37:39  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-16 15:37:39  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2023-01-16 15:37:39  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 715 ms
+2023-01-16 15:37:39  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2023-01-16 15:37:39  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2023-01-16 15:37:39  INFO [org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true'
+2023-01-16 15:37:39  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-16 15:37:39  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-01-16 15:37:39  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-16 15:37:39  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-01-16 15:37:40  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-16 15:37:40  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-16 15:37:40  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-16 15:37:40  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-16 15:37:40  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/css/**']
+2023-01-16 15:37:40  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-16 15:37:40  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/js/**']
+2023-01-16 15:37:40  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/img/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-16 15:37:40  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/img/**']
+2023-01-16 15:37:40  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@27666c5b, org.springframework.security.web.session.ForceEagerSessionCreationFilter@2164dbb0, org.springframework.security.web.session.ForceEagerSessionCreationFilter@505974f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63c58dbb, org.springframework.security.web.context.SecurityContextPersistenceFilter@76477c58, org.springframework.security.web.header.HeaderWriterFilter@2581e3c7, org.springframework.security.web.csrf.CsrfFilter@3b0b9f59, org.springframework.security.web.authentication.logout.LogoutFilter@504ce341, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@46797032, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@14df5c6e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53ba8d85, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@250ba9b9, org.springframework.security.web.session.SessionManagementFilter@41472ee1, org.springframework.security.web.access.ExceptionTranslationFilter@13174d46, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25718dc1]
+2023-01-16 15:37:40  INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2023-01-16 15:37:40  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-16 15:37:40  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-16 15:37:40  INFO [com.book.BookApplication] Started BookApplication in 2.413 seconds (JVM running for 2.902)
+2023-01-16 15:37:44  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-16 15:37:44  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2023-01-16 15:37:44  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [6]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_0_0_] : [TIMESTAMP]) - [2023-01-16T00:34:49.270870]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_0_0_] : [TIMESTAMP]) - [2023-01-16T00:34:49.270870]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_0_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_0_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([author6_0_0_] : [VARCHAR]) - [김영하]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([book_sel7_0_0_] : [VARCHAR]) - [SELL]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([descript8_0_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([price9_0_0_] : [INTEGER]) - [12600]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([img10_0_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([isbn11_0_0_] : [VARCHAR]) - [9791191114225]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([publish12_0_0_] : [VARCHAR]) - [복복서가]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([stock_n13_0_0_] : [INTEGER]) - [50]
+2023-01-16 15:37:44 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([title14_0_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-16 15:37:45  WARN [nz.net.ultraq.thymeleaf.layoutdialect.fragments.FragmentProcessor] You don't need to put the layout:fragment/data-layout-fragment attribute into the <head> section - the decoration process will automatically copy the <head> section of your content templates into your layout page.
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [6]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_0_0_] : [TIMESTAMP]) - [2023-01-16T00:34:49.270870]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_0_0_] : [TIMESTAMP]) - [2023-01-16T00:34:49.270870]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_0_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_0_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([author6_0_0_] : [VARCHAR]) - [김영하]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([book_sel7_0_0_] : [VARCHAR]) - [SELL]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([descript8_0_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([price9_0_0_] : [INTEGER]) - [12600]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([img10_0_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([isbn11_0_0_] : [VARCHAR]) - [9791191114225]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([publish12_0_0_] : [VARCHAR]) - [복복서가]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([stock_n13_0_0_] : [INTEGER]) - [50]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([title14_0_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [rlaalstjr]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i1_3_] : [BIGINT]) - [7]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([address6_3_] : [VARCHAR]) - [서울시]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([email7_3_] : [VARCHAR]) - [rlaalstjr@email.com]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([name8_3_] : [VARCHAR]) - [김민석]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([password9_3_] : [VARCHAR]) - [$2a$10$omnX8roWrjGylh6xEKiso.CzCfiBe2jYxrVHTgb7qmc8OqrsButme]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([role10_3_] : [VARCHAR]) - [USER]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([userid11_3_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [7]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([cart_id1_1_] : [BIGINT]) - [8]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_1_] : [TIMESTAMP]) - [2023-01-16T00:39:39.267124]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_1_] : [TIMESTAMP]) - [2023-01-16T00:39:39.267124]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_1_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_1_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i6_1_] : [BIGINT]) - [7]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [8]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [2] as [BIGINT] - [6]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [TIMESTAMP] - [2023-01-16T15:37:48.813977]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [2] as [TIMESTAMP] - [2023-01-16T15:37:48.813977]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [3] as [VARCHAR] - [rlaalstjr]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [4] as [VARCHAR] - [rlaalstjr]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [5] as [BIGINT] - [6]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [6] as [BIGINT] - [8]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [7] as [INTEGER] - [1]
+2023-01-16 15:37:48 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [8] as [BIGINT] - [22]
+2023-01-16 15:37:48  WARN [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] SQL Error: 1364, SQLState: HY000
+2023-01-16 15:37:48 ERROR [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] Field 'count' doesn't have a default value
+2023-01-16 15:37:48  INFO [org.hibernate.engine.jdbc.batch.internal.AbstractBatchImpl] HHH000010: On release of batch it still contained JDBC statements
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [rlaalstjr]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i1_3_] : [BIGINT]) - [7]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([address6_3_] : [VARCHAR]) - [서울시]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([email7_3_] : [VARCHAR]) - [rlaalstjr@email.com]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([name8_3_] : [VARCHAR]) - [김민석]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([password9_3_] : [VARCHAR]) - [$2a$10$omnX8roWrjGylh6xEKiso.CzCfiBe2jYxrVHTgb7qmc8OqrsButme]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([role10_3_] : [VARCHAR]) - [USER]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([userid11_3_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [6]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설...]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 2 2 (단골손님을 찾습니다 | 이미예 장편소설)]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [100만 독자를 사로잡은 《달러구트 꿈 백화점》, 그 두 번째 이야기
+
+어느덧 페니가 달러구트 꿈 백화점에서 일한 지도 1년이 넘었다.
+재고가 부족한 꿈을 관리하고, 꿈값 창고에서 감정으로 가득 찬 병을 옮기고, 프런트의 수많은 눈꺼풀 저울을 관리하는 일에 능숙해진 페니는 자신감이 넘친다. 게다가 꿈 산업 종사자로 인정을 받아야만 드나들 수 있는 ‘컴퍼니 ...]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3247609/32476096623.20221019153025.jpg]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165343729]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-16 15:38:40 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [rlaalstjr]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i1_3_] : [BIGINT]) - [7]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_3_] : [TIMESTAMP]) - [2023-01-16T00:39:11.769359]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([address6_3_] : [VARCHAR]) - [서울시]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([email7_3_] : [VARCHAR]) - [rlaalstjr@email.com]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([name8_3_] : [VARCHAR]) - [김민석]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([password9_3_] : [VARCHAR]) - [$2a$10$omnX8roWrjGylh6xEKiso.CzCfiBe2jYxrVHTgb7qmc8OqrsButme]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([role10_3_] : [VARCHAR]) - [USER]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([userid11_3_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [7]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([cart_id1_1_] : [BIGINT]) - [8]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_1_] : [TIMESTAMP]) - [2023-01-16T00:39:39.267124]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_1_] : [TIMESTAMP]) - [2023-01-16T00:39:39.267124]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_1_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_1_] : [VARCHAR]) - [rlaalstjr]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i6_1_] : [BIGINT]) - [7]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [BIGINT] - [8]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [9]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [INTEGER]) - [12600]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [INTEGER]) - [2]
+2023-01-16 15:38:42 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-16 15:38:50 ERROR [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: Optional int parameter 'stockNumber' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.] with root cause
+java.lang.IllegalStateException: Optional int parameter 'stockNumber' is present but cannot be translated into a null value due to being declared as a primitive type. Consider declaring it as object wrapper for the corresponding primitive type.
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.handleNullValue(AbstractNamedValueMethodArgumentResolver.java:263) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.annotation.AbstractNamedValueMethodArgumentResolver.resolveArgument(AbstractNamedValueMethodArgumentResolver.java:116) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:880) ~[spring-webmvc-5.3.23.jar:5.3.23]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:132) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.ForceEagerSessionCreationFilter.doFilterInternal(ForceEagerSessionCreationFilter.java:45) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.ForceEagerSessionCreationFilter.doFilterInternal(ForceEagerSessionCreationFilter.java:45) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186) ~[spring-security-web-5.7.3.jar:5.7.3]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.23.jar:5.3.23]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.lang.Thread.run(Thread.java:829) ~[?:?]

@@ -24,7 +24,7 @@ public class OrderBook extends BaseEntity{
 
     private int orderPrice;
 
-    private int count;
+    private Integer count;
 
     public static OrderBook createOrderBook(Book book, int count) {
         OrderBook orderBook = new OrderBook();

@@ -116,7 +116,7 @@ public class CartService {
 
             OrderDto orderDto = new OrderDto();
             orderDto.setBookId(cartBook.getBook().getId());
-            orderDto.setCount(cartBook.getStockNumber());
+            orderDto.setStockNumber(cartBook.getStockNumber());
             orderDtoList.add(orderDto);
         }
 

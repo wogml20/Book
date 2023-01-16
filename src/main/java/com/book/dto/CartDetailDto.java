@@ -11,13 +11,13 @@ public class CartDetailDto {
 
     private String title;
 
-    private int discount;
+    private Integer discount;
 
-    private int stockNumber;
+    private Integer stockNumber;
 
     private String imageSrc;
 
-    public CartDetailDto(Long cartBookId, String title, int discount, int stockNumber, String imageSrc) {
+    public CartDetailDto(Long cartBookId, String title, Integer discount, Integer stockNumber, String imageSrc) {
         this.cartBookId = cartBookId;
         this.title = title;
         this.discount = discount;

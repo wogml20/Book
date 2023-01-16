@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface CartBookRepository extends JpaRepository<CartBook, Long> {
+public interface reCartBookRepository extends JpaRepository<CartBook, Long> {
 
     CartBook findByCartIdAndBookId(Long cartId, Long bookId);
 
