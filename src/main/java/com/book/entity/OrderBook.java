@@ -30,7 +30,7 @@ public class OrderBook extends BaseEntity{
         OrderBook orderBook = new OrderBook();
         orderBook.setBook(book);
         orderBook.setCount(count);
-        orderBook.setOrderPrice(book.getPrice());
+        orderBook.setOrderPrice(book.getPrice() * count);
         book.removeStock(count);
         return orderBook;
     }

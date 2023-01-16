@@ -78,11 +78,11 @@
                         </tr>
                       <tr>
                         <td class="p-2 pr-4">상세설명</td>
-                        <td class="p-2"><textarea readonly th:text="${bookDetail.description}" name="description" class="description"></textarea>
+                        <td class="p-2"><p readonly th:text="${bookDetail.description}" class="description"></p>
                           <small class="text-secondary detailBtn" style="visibility: hidden"><a data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample" href="#collapseExample">자세히보기</a></small>
                           <div class="collapse" id="collapseExample">
                             <div class="card card-body">
-                              <p th:text="${bookDetail.description}"></p>
+                              <textarea th:text="${bookDetail.description}" name="description"></textarea>
                             </div>
                           </div>
                         </td>

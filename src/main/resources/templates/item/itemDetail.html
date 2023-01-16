@@ -16,9 +16,28 @@
     }
   </style>
 </th:block>
+
 <th:block layout:fragment="script">
   <script th:inline="javascript">
     $(document).ready(function(){
+
+      let price_td = document.querySelectorAll(".price")
+
+      for(let i = 0; i<price_td.length; i++) {
+        let txt_price = price_td[i].innerText
+        txt_price *= 1
+
+        if(txt_price == 0) price_td[i].innerText = "절판"
+        else price_td[i].innerText = txt_price.toLocaleString()
+      }
+
+      let length = document.querySelector(".description").innerHTML.length
+      let s_descri = document.querySelector(".description").innerHTML
+
+      if(length > 200) {
+        document.querySelector(".description").innerHTML = s_descri.substring(0,200) + "...";
+        document.querySelector(".detailBtn").style.visibility = "visible"
+      }
 
       calculateToalPrice();
 
@@ -28,15 +47,16 @@
     });
 
     function calculateToalPrice(){
-      var count = $("#count").val();
-      var price = $("#price").val();
+      var count = Number($("#count").val());
+      var price = Number(document.getElementById("price").innerText.replace(",",""));
+
       var totalPrice = price*count;
-      $("#totalPrice").html('총 상품금액' + totalPrice + '원');
+
+      $("#totalPrice").html('총 상품금액 <b>' + totalPrice.toLocaleString() + '</b> 원');
     }
 
     function order(){
 
-      debugger
       var token = $("meta[name='_csrf']").attr("content");
       var header = $("meta[name='_csrf_header']").attr("content");
 
@@ -119,7 +139,7 @@
   </script>
 </th:block>
 
-
+<body>
 <div layout:fragment="content">
   <input type="hidden" id="bookId" th:value="${bookDetail.id}">
   <section class="mt-5 p-3 container">
@@ -163,29 +183,12 @@
     </div>
     <div class="container-fluid text-center bg-light p-3 mt-4 fixed-bottom">
       <span class="mt-3 mr-5 price" name="totalPrice" id="totalPrice" style="font-size: 20px"> </span>
-<!--      <form action="/user/item/cart" method="post">-->
         <button type="submit" class="btn ml-5" style="background-color:rgb(103,167,47); color: white; width: 200px" onclick="addCart()">장바구니</button>
         <button type="button" class="btn ml-1" style="border:1px solid rgb(103,167,47); color: rgb(103,167,47); width: 200px" onclick="order()">바로구매</button>
-<!--      </form>-->
     </div>
   </section>
-  <script>
-    let price_td = document.querySelectorAll(".price")
-
-    for(let i = 0; i<price_td.length; i++) {
-      let txt_price = price_td[i].innerHTML
-      txt_price *= 1
-
-      if(txt_price == 0) price_td[i].innerHTML = "절판"
-      else price_td[i].innerHTML = txt_price.toLocaleString()
-    }
-
-    let length = document.querySelector(".description").innerHTML.length
-    let s_descri = document.querySelector(".description").innerHTML
-
-    if(length > 500) {
-      document.querySelector(".description").innerHTML = s_descri.substring(0,500) + "...";
-      document.querySelector(".detailBtn").style.visibility = "visible"
-    }
-  </script>
 </div>
+
+</body>
+
+</html>
