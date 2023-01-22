@@ -3,8 +3,11 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
-    <meta charset="utf-8">
+    <meta name="_csrf" th:content="${_csrf.token}"/>
+    <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
 </head>
+
+
 <body>
 <div th:fragment="header">
 
@@ -31,8 +34,8 @@
                         <a class="nav-link" href="/admin/items" style="color:black">상품 관리</a>
                     </li>
 
-                    <form action="/book/search/" method="post">
-                        <input type="text" placeholder="키워드를 입력하세요" name="title">
+                    <form action="/book/search/" method="get">
+                        <input type="text" placeholder="키워드를 입력하세요" name="title" id="title">
                         <button type="submit" style="background:none; border: none;"><i class="ml-3 fas fa-search fa-2x" style="color: rgb(103,167,47);"></i></button>
                     </form>
                 </ul>

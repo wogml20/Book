@@ -38,14 +38,10 @@ public class BookService {
 //    }
 
     @Transactional(readOnly = true)
-    public BookFormDto searchBooks(String title) {
-        Book book = (Book) bookRepository.findByTitle(title);
-        log.info("========================================================");
-        log.info(book);
-        BookFormDto  bookFormDto = BookFormDto.of(book);
-        log.info("========================================================");
-        log.info(bookFormDto);
-        return bookFormDto;
+    public List<BookFormDto> searchBooks(String title) {
+        List<BookFormDto> book = bookRepository.findByTitleContaining(title);
+
+        return book;
     }
 
     @Transactional(readOnly = true)

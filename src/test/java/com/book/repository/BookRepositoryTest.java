@@ -1,6 +1,7 @@
 package com.book.repository;
 
 import com.book.constant.BookSellStatus;
+import com.book.dto.BookFormDto;
 import com.book.entity.Book;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -27,9 +28,9 @@ class BookRepositoryTest {
         book.setTitle("작별인사");
         book.setImageSrc("test");
         book.setAuthor("김영하");
-        book.setStockNumber(100);
+        book.setCount(100);
         book.setIsbn("1234324");
-        book.setprice(10000);
+        book.setPrice(10000);
         book.setPublisher("길벗");
         book.setDescription("테스트 상품 상세 설명");
         book.setBookSellStatus(BookSellStatus.SELL);
@@ -44,7 +45,7 @@ class BookRepositoryTest {
         for(int i = 1; i<=10; i++) {
             Book book = new Book();
             book.setTitle("테스트 상품" + i);
-            book.setprice(10000 + i);
+            book.setPrice(10000 + i);
             book.setDescription("테스트 상품 상세 설명" + i);
             Book savedBook = bookRepository.save(book);
         }
@@ -54,12 +55,16 @@ class BookRepositoryTest {
     @DisplayName("책 제목 조회 테스트")
     public void findByItemNmTest() {
         this.createBookList();
-        List<Book> bookList = bookRepository.findByTitle("테스트 상품1");
-        for(Book book : bookList) {
-            System.out.println(book.toString());
-        }
+        BookFormDto bookFormDto = bookRepository.findByTitle("테스트");
+//        for(BookFormDto book : bookFormDto) {
+//            System.out.println(book.toString());
+//        }
+        System.out.println(bookFormDto.getClass().getDeclaredFields().length);
+//        System.out.println(bookFormDto.getTitle());
     }
-//
+
+
+
 //    @Test
 //    @DisplayName("책 제목, 상세 설명 조회 테스트")
 //    public void findByBookNmOrBookDetail() {

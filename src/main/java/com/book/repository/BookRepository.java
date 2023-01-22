@@ -1,5 +1,6 @@
 package com.book.repository;
 
+import com.book.dto.BookFormDto;
 import com.book.entity.Book;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -10,9 +11,9 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 public interface BookRepository extends JpaRepository<Book, Long>, QuerydslPredicateExecutor<Book>, BookRepositoryCustom {
 
-    List<Book> findByTitle(String title);
+    BookFormDto findByTitle(String title);
 
-    List<Book> findByTitleContaining(String title);
+    List<BookFormDto> findByTitleContaining(String title);
 
     List<Book> findAll();
 
