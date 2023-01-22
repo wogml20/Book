@@ -6934,3 +6934,1018 @@ javax.persistence.NonUniqueResultException: query did not return a unique result
 2023-01-23 00:46:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
 2023-01-23 00:46:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
 2023-01-23 00:46:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:49:15  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:49:15  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2023-01-23 00:49:15  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2023-01-23 00:49:16  INFO [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-23 00:49:16  INFO [com.book.BookApplication] Starting BookApplication using Java 11.0.17 on gimjaehuis-MacBook-Pro.local with PID 80287 (/Users/kimjaehee/Github/book/Book/build/classes/java/main started by kimjaehee in /Users/kimjaehee/Github/book/Book)
+2023-01-23 00:49:16  INFO [com.book.BookApplication] The following 2 profiles are active: "local", "common"
+2023-01-23 00:49:16  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:49:16  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-23 00:49:17  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:49:17  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 29 ms. Found 6 JPA repository interfaces.
+2023-01-23 00:49:17  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:49:17  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-23 00:49:17  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2023-01-23 00:49:17  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:49:17  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2023-01-23 00:49:17  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 706 ms
+2023-01-23 00:49:17  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2023-01-23 00:49:17  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2023-01-23 00:49:17  INFO [org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true'
+2023-01-23 00:49:17  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:49:17  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-01-23 00:49:17  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:49:17  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-01-23 00:49:18  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:49:18  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:49:18  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:49:18  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:49:18  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/css/**']
+2023-01-23 00:49:18  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:49:18  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/js/**']
+2023-01-23 00:49:18  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/img/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:49:18  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/img/**']
+2023-01-23 00:49:18  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@58863cca, org.springframework.security.web.session.ForceEagerSessionCreationFilter@522e6824, org.springframework.security.web.session.ForceEagerSessionCreationFilter@79bb4692, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6aedcc78, org.springframework.security.web.context.SecurityContextPersistenceFilter@77983465, org.springframework.security.web.header.HeaderWriterFilter@5e76658a, org.springframework.security.web.csrf.CsrfFilter@55f8bf39, org.springframework.security.web.authentication.logout.LogoutFilter@3008b027, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e9f476d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4162117d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@155f8d04, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@709853e7, org.springframework.security.web.session.SessionManagementFilter@1ae07879, org.springframework.security.web.access.ExceptionTranslationFilter@16e406df, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@41415a2]
+2023-01-23 00:49:18  INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2023-01-23 00:49:18  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-23 00:49:18  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:49:18  INFO [com.book.BookApplication] Started BookApplication in 2.398 seconds (JVM running for 2.877)
+2023-01-23 00:49:22  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:49:22  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:49:22  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:49:23  WARN [nz.net.ultraq.thymeleaf.layoutdialect.fragments.FragmentProcessor] You don't need to put the layout:fragment/data-layout-fragment attribute into the <head> section - the decoration process will automatically copy the <head> section of your content templates into your layout page.
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:49:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:49:27 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [rlaalstjr]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i1_3_] : [BIGINT]) - [5]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_3_] : [TIMESTAMP]) - [2023-01-16T20:02:17.130014]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_3_] : [TIMESTAMP]) - [2023-01-16T20:02:17.130014]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([address6_3_] : [VARCHAR]) - [서울시]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([email7_3_] : [VARCHAR]) - [rlaalstjr@email.com]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([name8_3_] : [VARCHAR]) - [김민석]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([password9_3_] : [VARCHAR]) - [$2a$10$V3stoxgu/A3EWLb0hr1eWusLomCTn.riIBX5iG1LPdqURfb0laz92]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([role10_3_] : [VARCHAR]) - [USER]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([userid11_3_] : [VARCHAR]) - [rlaalstjr]
+2023-01-23 00:49:31  INFO [com.book.controller.BookController] ========================================
+2023-01-23 00:49:31  INFO [com.book.controller.BookController] 작별인사
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [%작별인사%]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [2] as [CHAR] - [\]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([book_id1_0_] : [BIGINT]) - [3]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_0_] : [TIMESTAMP]) - [2023-01-16T20:01:49.664271]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_0_] : [TIMESTAMP]) - [2023-01-16T23:35:55.792443]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_0_] : [VARCHAR]) - [rlaalstjr]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([author6_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([book_sel7_0_] : [VARCHAR]) - [SELL]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([count8_0_] : [INTEGER]) - [5]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([descript9_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([img10_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([isbn11_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([price12_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([publish13_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:49:31 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([title14_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:49:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:49:34 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:50:09 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:51:09  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:51:09  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2023-01-23 00:51:09  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2023-01-23 00:51:11  INFO [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-23 00:51:11  INFO [com.book.BookApplication] Starting BookApplication using Java 11.0.17 on gimjaehuis-MacBook-Pro.local with PID 81402 (/Users/kimjaehee/Github/book/Book/build/classes/java/main started by kimjaehee in /Users/kimjaehee/Github/book/Book)
+2023-01-23 00:51:11  INFO [com.book.BookApplication] The following 2 profiles are active: "local", "common"
+2023-01-23 00:51:11  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:51:11  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-23 00:51:11  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:51:11  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 37 ms. Found 6 JPA repository interfaces.
+2023-01-23 00:51:12  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:51:12  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-23 00:51:12  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2023-01-23 00:51:12  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:51:12  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2023-01-23 00:51:12  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 724 ms
+2023-01-23 00:51:12  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2023-01-23 00:51:12  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2023-01-23 00:51:12  INFO [org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true'
+2023-01-23 00:51:12  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:51:12  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-01-23 00:51:12  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:51:12  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-01-23 00:51:13  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:51:13  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:51:13  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:51:13  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:51:13  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/css/**']
+2023-01-23 00:51:13  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:51:13  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/js/**']
+2023-01-23 00:51:13  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/img/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:51:13  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/img/**']
+2023-01-23 00:51:13  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f350713, org.springframework.security.web.session.ForceEagerSessionCreationFilter@7cb932dc, org.springframework.security.web.session.ForceEagerSessionCreationFilter@18a6ccc6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@dd1b6f2, org.springframework.security.web.context.SecurityContextPersistenceFilter@62a8e11c, org.springframework.security.web.header.HeaderWriterFilter@db9967e, org.springframework.security.web.csrf.CsrfFilter@188dc28, org.springframework.security.web.authentication.logout.LogoutFilter@7fc9cfb8, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@105e16fa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b1dd63, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37f9e846, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7606279a, org.springframework.security.web.session.SessionManagementFilter@2cc01f98, org.springframework.security.web.access.ExceptionTranslationFilter@3fb20bc3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4055fb52]
+2023-01-23 00:51:13  INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2023-01-23 00:51:13  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-23 00:51:13  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:51:13  INFO [com.book.BookApplication] Started BookApplication in 2.514 seconds (JVM running for 2.982)
+2023-01-23 00:51:14  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:51:14  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:51:14  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2023-01-23 00:51:30  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:51:30  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2023-01-23 00:51:30  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2023-01-23 00:51:31  INFO [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-23 00:51:32  INFO [com.book.BookApplication] Starting BookApplication using Java 11.0.17 on gimjaehuis-MacBook-Pro.local with PID 81615 (/Users/kimjaehee/Github/book/Book/build/classes/java/main started by kimjaehee in /Users/kimjaehee/Github/book/Book)
+2023-01-23 00:51:32  INFO [com.book.BookApplication] The following 2 profiles are active: "local", "common"
+2023-01-23 00:51:32  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:51:32  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-23 00:51:32  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:51:32  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 28 ms. Found 6 JPA repository interfaces.
+2023-01-23 00:51:32  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:51:32  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-23 00:51:32  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2023-01-23 00:51:32  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:51:32  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2023-01-23 00:51:32  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 682 ms
+2023-01-23 00:51:32  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2023-01-23 00:51:32  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2023-01-23 00:51:32  INFO [org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true'
+2023-01-23 00:51:32  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:51:32  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-01-23 00:51:33  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:51:33  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-01-23 00:51:33  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:51:33  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:51:33  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:51:33  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:51:33  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/css/**']
+2023-01-23 00:51:33  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:51:33  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/js/**']
+2023-01-23 00:51:33  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/img/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:51:33  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/img/**']
+2023-01-23 00:51:33  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@449cc415, org.springframework.security.web.session.ForceEagerSessionCreationFilter@47b11399, org.springframework.security.web.session.ForceEagerSessionCreationFilter@272d9016, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f49b7d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@11693191, org.springframework.security.web.header.HeaderWriterFilter@b68ac6c, org.springframework.security.web.csrf.CsrfFilter@72384d6d, org.springframework.security.web.authentication.logout.LogoutFilter@571a0484, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@37db5948, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1fbd27c2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@554e81f5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@20ae755f, org.springframework.security.web.session.SessionManagementFilter@6dc00c4d, org.springframework.security.web.access.ExceptionTranslationFilter@490dff6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e4397e9]
+2023-01-23 00:51:34  INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2023-01-23 00:51:34  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-23 00:51:34  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:51:34  INFO [com.book.BookApplication] Started BookApplication in 2.341 seconds (JVM running for 2.794)
+2023-01-23 00:51:35  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:51:35  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:51:35  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2023-01-23 00:51:47  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:51:47  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2023-01-23 00:51:47  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2023-01-23 00:51:49  INFO [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-23 00:51:49  INFO [com.book.BookApplication] Starting BookApplication using Java 11.0.17 on gimjaehuis-MacBook-Pro.local with PID 81820 (/Users/kimjaehee/Github/book/Book/build/classes/java/main started by kimjaehee in /Users/kimjaehee/Github/book/Book)
+2023-01-23 00:51:49  INFO [com.book.BookApplication] The following 2 profiles are active: "local", "common"
+2023-01-23 00:51:49  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:51:49  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-23 00:51:49  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:51:49  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 27 ms. Found 6 JPA repository interfaces.
+2023-01-23 00:51:49  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:51:49  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-23 00:51:49  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2023-01-23 00:51:49  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:51:49  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2023-01-23 00:51:49  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 676 ms
+2023-01-23 00:51:49  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2023-01-23 00:51:49  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2023-01-23 00:51:49  INFO [org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true'
+2023-01-23 00:51:50  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:51:50  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-01-23 00:51:50  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:51:50  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-01-23 00:51:50  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:51:50  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:51:50  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:51:50  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:51:50  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/css/**']
+2023-01-23 00:51:50  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:51:50  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/js/**']
+2023-01-23 00:51:50  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/img/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:51:50  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/img/**']
+2023-01-23 00:51:50  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@45875331, org.springframework.security.web.session.ForceEagerSessionCreationFilter@5d7736c4, org.springframework.security.web.session.ForceEagerSessionCreationFilter@310574f1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@73ee63d5, org.springframework.security.web.context.SecurityContextPersistenceFilter@1a52a84c, org.springframework.security.web.header.HeaderWriterFilter@32b446dd, org.springframework.security.web.csrf.CsrfFilter@45fb7c37, org.springframework.security.web.authentication.logout.LogoutFilter@293332f3, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@6e92739f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@10112dc3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@19929a25, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25a83a0f, org.springframework.security.web.session.SessionManagementFilter@41f04594, org.springframework.security.web.access.ExceptionTranslationFilter@76ee0b48, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@683646e4]
+2023-01-23 00:51:51  INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2023-01-23 00:51:51  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-23 00:51:51  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:51:51  INFO [com.book.BookApplication] Started BookApplication in 2.317 seconds (JVM running for 2.777)
+2023-01-23 00:51:56  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:51:56  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:51:56  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:51:56 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:51:56  WARN [nz.net.ultraq.thymeleaf.layoutdialect.fragments.FragmentProcessor] You don't need to put the layout:fragment/data-layout-fragment attribute into the <head> section - the decoration process will automatically copy the <head> section of your content templates into your layout page.
+2023-01-23 00:52:10  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:52:10  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2023-01-23 00:52:10  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2023-01-23 00:52:12  INFO [org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.2.5.Final
+2023-01-23 00:52:12  INFO [com.book.BookApplication] Starting BookApplication using Java 11.0.17 on gimjaehuis-MacBook-Pro.local with PID 82019 (/Users/kimjaehee/Github/book/Book/build/classes/java/main started by kimjaehee in /Users/kimjaehee/Github/book/Book)
+2023-01-23 00:52:12  INFO [com.book.BookApplication] The following 2 profiles are active: "local", "common"
+2023-01-23 00:52:12  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-23 00:52:12  INFO [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-23 00:52:13  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-23 00:52:13  INFO [org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 27 ms. Found 6 JPA repository interfaces.
+2023-01-23 00:52:13  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2023-01-23 00:52:13  INFO [org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2023-01-23 00:52:13  INFO [org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2023-01-23 00:52:13  INFO [org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-01-23 00:52:13  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2023-01-23 00:52:13  INFO [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 677 ms
+2023-01-23 00:52:13  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2023-01-23 00:52:13  INFO [com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2023-01-23 00:52:13  INFO [org.springframework.boot.autoconfigure.h2.H2ConsoleAutoConfiguration] H2 console available at '/h2-console'. Database available at 'jdbc:mysql://localhost:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true'
+2023-01-23 00:52:13  INFO [org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-01-23 00:52:13  INFO [org.hibernate.Version] HHH000412: Hibernate ORM core version 5.6.11.Final
+2023-01-23 00:52:13  INFO [org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-01-23 00:52:13  INFO [org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-01-23 00:52:14  INFO [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-23 00:52:14  INFO [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-23 00:52:14  WARN [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-01-23 00:52:14  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/css/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:52:14  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/css/**']
+2023-01-23 00:52:14  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/js/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:52:14  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/js/**']
+2023-01-23 00:52:14  WARN [org.springframework.security.config.annotation.web.builders.WebSecurity] You are asking Spring Security to ignore Ant [pattern='/img/**']. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-23 00:52:14  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will not secure Ant [pattern='/img/**']
+2023-01-23 00:52:14  INFO [org.springframework.security.web.DefaultSecurityFilterChain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@66cd395b, org.springframework.security.web.session.ForceEagerSessionCreationFilter@7500e3c, org.springframework.security.web.session.ForceEagerSessionCreationFilter@451459b5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@dbf7122, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f41d6ec, org.springframework.security.web.header.HeaderWriterFilter@720f7e1b, org.springframework.security.web.csrf.CsrfFilter@4070b197, org.springframework.security.web.authentication.logout.LogoutFilter@67616b2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@51a8ac89, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79750bd8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74f1d168, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29aa420d, org.springframework.security.web.session.SessionManagementFilter@11ceff00, org.springframework.security.web.access.ExceptionTranslationFilter@1769f72a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@405aacc8]
+2023-01-23 00:52:14  INFO [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2023-01-23 00:52:14  INFO [org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2023-01-23 00:52:14  INFO [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2023-01-23 00:52:14  INFO [com.book.BookApplication] Started BookApplication in 2.354 seconds (JVM running for 2.809)
+2023-01-23 00:52:18  INFO [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-01-23 00:52:18  INFO [org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2023-01-23 00:52:18  INFO [org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:52:18 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:52:18  WARN [nz.net.ultraq.thymeleaf.layoutdialect.fragments.FragmentProcessor] You don't need to put the layout:fragment/data-layout-fragment attribute into the <head> section - the decoration process will automatically copy the <head> section of your content templates into your layout page.
+2023-01-23 00:52:21  INFO [com.book.controller.BookController] ========================================
+2023-01-23 00:52:21  INFO [com.book.controller.BookController] 작별인사
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [%작별인사%]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [2] as [CHAR] - [\]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([book_id1_0_] : [BIGINT]) - [3]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_0_] : [TIMESTAMP]) - [2023-01-16T20:01:49.664271]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_0_] : [TIMESTAMP]) - [2023-01-16T23:35:55.792443]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_0_] : [VARCHAR]) - [rlaalstjr]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([author6_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([book_sel7_0_] : [VARCHAR]) - [SELL]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([count8_0_] : [INTEGER]) - [5]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([descript9_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([img10_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([isbn11_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([price12_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([publish13_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:52:21 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([title14_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:52:23 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [rlaalstjr]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([member_i1_3_] : [BIGINT]) - [5]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_3_] : [TIMESTAMP]) - [2023-01-16T20:02:17.130014]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_3_] : [TIMESTAMP]) - [2023-01-16T20:02:17.130014]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_3_] : [VARCHAR]) - [anonymousUser]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([address6_3_] : [VARCHAR]) - [서울시]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([email7_3_] : [VARCHAR]) - [rlaalstjr@email.com]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([name8_3_] : [VARCHAR]) - [김민석]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([password9_3_] : [VARCHAR]) - [$2a$10$V3stoxgu/A3EWLb0hr1eWusLomCTn.riIBX5iG1LPdqURfb0laz92]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([role10_3_] : [VARCHAR]) - [USER]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([userid11_3_] : [VARCHAR]) - [rlaalstjr]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:52:26 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:52:32  INFO [com.book.controller.BookController] ========================================
+2023-01-23 00:52:32  INFO [com.book.controller.BookController] 달러구트
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [1] as [VARCHAR] - [%달러구트%]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicBinder] binding parameter [2] as [CHAR] - [\]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([book_id1_0_] : [BIGINT]) - [11]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([reg_time2_0_] : [TIMESTAMP]) - [2023-01-16T21:57:31.987091]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([update_t3_0_] : [TIMESTAMP]) - [2023-01-16T23:35:53.222035]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([created_4_0_] : [VARCHAR]) - [rlarudtnadmin]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([modified5_0_] : [VARCHAR]) - [rlaalstjr]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([author6_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([book_sel7_0_] : [VARCHAR]) - [SELL]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([count8_0_] : [INTEGER]) - [5]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([descript9_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([img10_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([isbn11_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([price12_0_] : [INTEGER]) - [12420]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([publish13_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:52:32 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([title14_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [5]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [13]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 2 (김호연 장편소설)]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [※ 단풍 에디션: 매장 구매, 바로드림 구매시에는 해당 매장의 에디션 재고를 먼저 확인해 주십시오.
+
+70만 독자를 사로잡은 재미와 감동 『불편한 편의점』이 다시 열렸다!
+
+한층 진득해진 이야기와 궁금증 가득한 캐릭터
+고난의 시간을 통과하는 사람들이 다시 편의점에 모여든다!
+
+출간 후 1년이 넘도록 독자의 사랑을 받으며 베스트셀러 상위권을 지키고 있는 소설, 김호연 작가의 『불편한 편의점』이 그 두 번째 이야기로 다시 찾아왔다. 서울역 노숙인 독고 씨가 편의점의 야간 알바로 일하면서 시작되는 1편의 이야기는 예측불허의 웃음과 따스한 온기로 잔잔한 감동을 선사했다. 『불편한 편의점 2』는 전편의 위트와 속 깊은 시선을 이어가며 더욱 진득한 이야기로 독자를 끌어당긴다. 
+
+소설은 1편의 시간으로부터 1년 반이 흐른 여름날의 편의점을 스케치하며 시작된다. 그동안 세상도 달라지고 청파동의 ALWAYS편의점도 이모저모 바뀌었다. 숨이 턱턱 막히는 더위에도 마스크를 써야 하는 도입부의 묘사는 소설 속 현실에도 코로나가 있음을 짐작게 한다. 아들과의 불화로 답답해하던 선숙은 점장이 되었고, 편의점을 팔자고 조르던 염 여사의 말썽꾼 아들 민식은 사장이 되어 있다. 말이 사장이지, 민식은 경영에는 관심이 없고 수익 운운하며 주휴수당 같은 비용 줄이기에만 열을 올리니, 여러모로 ‘진짜로 불편해진’ 편의점이 아닐 수 없는데……. 그러던 중 독고의 후임으로 밤 시간을 책임지던 곽 씨가 그만두고 새 야간 알바가 들어오면서 편의점은 다시 한 번 변화를 맞이한다.  
+
+새로 온 알바는 커다란 덩치와 부담스러운 행동이 누군가를 연상시키는 40대 사내. 그는 인간 알바몬이라도 되는 양 화려한 알바 경력을 자랑하지만 정작 편의점 일은 어수룩하기만 하다. 게다가 수다쟁이에 오지랖은 못 말릴 지경이어서 점장 선숙에게 핀잔을 뜯기 일쑤다. 그러거나 말거나 그는 황근배라는 이름 대신 홍금보라는 별명이 적힌 명찰을 가슴에 달고 마냥 느긋하게 손님들을 맞으며 편의점의 밤을 지켜 나간다.]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3368499/33684998621.20221019114452.jpg]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571379]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [11]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [달러구트 꿈 백화점 1 (주문하신 꿈은 매진입니다 | 이미예 장편소설)]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [잠들어야만 입장 가능한 꿈 백화점에서 일어나는 비밀스럽고도 기묘하며 가슴 뭉클한 판타지 소설
+
+여기는 잠들어야만 입장할 수 있는 ‘달러구트 꿈 백화점’입니다. 잠들어야만 입장할 수 있는 독특한 마을. 그곳에 들어온 잠든 손님들에게 가장 인기 있는 곳은, 온갖 꿈을 한데 모아 판매하는 ‘달러구트의 꿈 백화점’이다. 긴 잠을 자는 사람들은 물론이고, 짧은 낮잠...]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243610/32436104744.20221019110256.jpg]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [이미예]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791165341909]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [팩토리나인]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [4]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [불편한 편의점 (김호연 장편소설, 40만부 기념 벚꽃 에디션)]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [원 플러스 원의 기쁨, 삼각김밥 모양의 슬픔, 만 원에 네 번의 폭소가 터지는 곳!
+힘겨운 시대를 살아가는 우리들에게 다가온 조금 특별한 편의점 이야기
+
+누적 판매 40만부 돌파, 2022년 가장 사랑받는 소설
+★★★전 서점 종합베스트 1위, 2021 올해의 책,
+★★★국립중앙도서관 사서추천도서, 해외 6개국 판권 수출
+
+김호연 작가의 장편소설 『불편한 편...]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3244499/32444990070.20230103163248.jpg]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김호연]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791161571188]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [나무옆의자]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [3]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [작별인사 (밤하늘 에디션, 김영하 장편소설)]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [누구도 도와줄 수 없는 상황, 혼자 헤쳐나가야 한다
+지켜야 할 약속, 붙잡고 싶은 온기
+
+김영하가 『살인자의 기억법』 이후 9 년 만에 내놓는 장편소설 『작별인사』는 그리 멀지 않은 미래를 배경으로, 별안간 삶이 송두리째 뒤흔들린 한 소년의 여정을 좇는다. 유명한 IT 기업의 연구원인 아버지와 쾌적하고 평화롭게 살아가던 철이는 어느날 갑자기 수용소로 끌려가...]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3243817/32438177755.20221019135504.jpg]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [김영하]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9791191114225]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [복복서가]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12600]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_0_0_] : [BIGINT]) - [2]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_1_0_] : [VARCHAR]) - [잠 (무라카미 하루키 소설)]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_2_0_] : [CLOB]) - [독일어판 일러스트레이션이 담긴 새로운 『잠』
+
+일러스트가 더해진 무라카미 하루키의 소설 『잠』. 《잠》은 1989년 하루키가 로마에 살았을 때 썼던 단편으로, 1993년 《TV피플》이라는 소설집에 묶였다. 이번 새로운 『잠』은 하루키 월드의 새로운 모델을 보여주는 아트북 개념의 책으로, 독일의 유명 일러스트레이터 카트 멘쉬크의 일러스트레이션이 더해졌다. 그...]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_3_0_] : [CLOB]) - [https://shopping-phinf.pstatic.net/main_3248673/32486731641.20221019132028.jpg]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_4_0_] : [VARCHAR]) - [무라카미 하루키]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_5_0_] : [VARCHAR]) - [9788970128801]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_6_0_] : [VARCHAR]) - [문학사상]
+2023-01-23 00:52:33 TRACE [org.hibernate.type.descriptor.sql.BasicExtractor] extracted value ([col_7_0_] : [INTEGER]) - [12420]
