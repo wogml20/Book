@@ -31,10 +31,21 @@ public class BookService {
         return book.getId();
     }
     
-    @Transactional
-    public List<Book> searchBooks(String title) {
-        List<Book> bookDtoList = bookRepository.findByTitleContaining(title);
-        return bookDtoList;
+//    @Transactional
+//    public List<Book> searchBooks(String title) {
+//        List<Book> bookDtoList = bookRepository.findByTitleContaining(title);
+//        return bookDtoList;
+//    }
+
+    @Transactional(readOnly = true)
+    public BookFormDto searchBooks(String title) {
+        Book book = (Book) bookRepository.findByTitle(title);
+        log.info("========================================================");
+        log.info(book);
+        BookFormDto  bookFormDto = BookFormDto.of(book);
+        log.info("========================================================");
+        log.info(bookFormDto);
+        return bookFormDto;
     }
 
     @Transactional(readOnly = true)
