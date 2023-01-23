@@ -69,7 +69,7 @@ public class CartController {
 
     @DeleteMapping(value = "/cartBook/{cartBookId}")
     public @ResponseBody ResponseEntity deleteCartBook(@PathVariable("cartBookId") Long cartBookId, Principal principal) {
-        if(cartService.validateCartBook(cartBookId, principal.getName())) {
+        if(!cartService.validateCartBook(cartBookId, principal.getName())) {
             return new ResponseEntity<String>("수정 권한이 없습니다.", HttpStatus.FORBIDDEN);
         }
 

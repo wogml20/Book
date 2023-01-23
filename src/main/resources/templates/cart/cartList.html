@@ -96,11 +96,14 @@
     }
 
     function deleteCartBook(obj){
+        debugger;
       var cartBookId = obj.dataset.id;
       var token = $("meta[name='_csrf']").attr("content");
       var header = $("meta[name='_csrf_header']").attr("content");
 
       var url = "/cartBook/" + cartBookId;
+
+        debugger;
 
       $.ajax({
         url      : url,
