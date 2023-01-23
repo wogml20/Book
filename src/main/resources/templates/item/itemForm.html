@@ -23,45 +23,6 @@
     })
 
 
-    function addCart(){
-      var token = $("meta[name='_csrf']").attr("content");
-      var header = $("meta[name='_csrf_header']").attr("content");
-
-      var url = "/cart";
-      var paramData = {
-        bookId : $("#bookId").val(),
-        count : 1
-      };
-
-      var param = JSON.stringify(paramData);
-
-      $.ajax({
-        url      : url,
-        type     : "POST",
-        contentType : "application/json",
-        data     : param,
-        beforeSend : function(xhr){
-          /* 데이터를 전송하기 전에 헤더에 csrf값을 설정 */
-          xhr.setRequestHeader(header, token);
-        },
-        dataType : "json",
-        cache   : false,
-        success  : function(result, status){
-          alert("상품을 장바구니에 담았습니다.");
-          location.href='/';
-        },
-        error : function(jqXHR, status, error){
-
-          if(jqXHR.status == '401'){
-            alert('로그인 후 이용해주세요');
-            location.href='/members/login';
-          } else{
-            alert(jqXHR.responseText);
-          }
-
-        }
-      });
-    }
 
 
   </script>
@@ -84,7 +45,6 @@
       </thead>
       <tbody>
       <tr th:each="info, status:${bookInfos}">
-        <input type="hidden" id="bookId" th:value="${info.getId()}">
         <td><a th:href="@{/book/detail/{bookId}(bookId=${info.getId()})}"><img th:src="${info.imageSrc}" style="width: 65px"; height="95px"></a> </td>
         <td><a th:href="@{/book/detail/{bookId}(bookId=${info.getId()})}" th:text="${info.title}"></a></td>
         <td th:text="${info.author}"></td>
@@ -92,10 +52,9 @@
         <td th:text="${info.price}" class="price"> </td>
         <td>
 <!--          data-target="#exampleModal"-->
-          <button type="submit" class="text-center btn btn-primary addBtn"  onclick="addCart()" data-toggle="modal">
+          <button type="submit" class="text-center btn btn-primary addBtn" data-toggle="modal">
             <!--            data-toggle="modal" data-target="#exampleModal"-->
-            <input type="hidden"> <input type="hidden"> <input type="hidden">
-            <input type="hidden" class="hiddenValue">
+            <input type="hidden" th:value="${info.getId()}" class="hiddenValue"> <input type="hidden"> <input type="hidden">
             <small class="text-white">장바구니</small>
           </button>
         </td>
@@ -137,6 +96,54 @@
 
       if(price == 0) price_td[i].innerHTML = "절판"
       else price_td[i].innerHTML = price.toLocaleString()
+    }
+
+    let buttons = document.querySelectorAll(".addBtn");
+
+    for(let i = 0; i<buttons.length; i++) {
+      buttons[i].addEventListener("click", function (){addCart(document.querySelectorAll(".hiddenValue")[i].value)});
+    }
+
+
+    function addCart(bookId){
+
+      var token = $("meta[name='_csrf']").attr("content");
+      var header = $("meta[name='_csrf_header']").attr("content");
+
+      var url = "/cart";
+      var paramData = {
+        bookId : bookId,
+        count : 1
+      };
+
+      var param = JSON.stringify(paramData);
+
+      $.ajax({
+        url      : url,
+        type     : "POST",
+        contentType : "application/json",
+        data     : param,
+        beforeSend : function(xhr){
+          /* 데이터를 전송하기 전에 헤더에 csrf값을 설정 */
+          xhr.setRequestHeader(header, token);
+        },
+        dataType : "json",
+        cache   : false,
+        success  : function(result, status){
+          alert("상품을 장바구니에 담았습니다.");
+          location.href='/';
+        },
+        error : function(jqXHR, status, error){
+
+          if(jqXHR.status == '401'){
+            alert('로그인 후 이용해주세요');
+            location.href='/members/login';
+          } else{
+            alert(jqXHR.responseText);
+          }
+
+        }
+      });
     }
   </script>
 </div>
