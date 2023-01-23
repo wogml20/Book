@@ -38,12 +38,7 @@ public class BookController {
 
     @GetMapping("/search")
     public String bookSearch(@RequestParam String title, Model model) {
-
-        log.info("========================================");
-        log.info(title);
-
         List<BookFormDto> bookFormDto = bookService.searchBooks(title);
-
 
         model.addAttribute("total", bookFormDto.size());
         model.addAttribute("bookInfos", bookFormDto);
