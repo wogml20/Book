@@ -6,7 +6,7 @@ spring:
 spring:
   profiles:
     group:
-      jhserver: "jhserver,common"
+      kimjaehee: "kimjaehee,common"
 ---
 spring:
   config:
@@ -40,10 +40,10 @@ logging:
 spring:
   config:
     activate:
-      on-profile: jhserver
+      on-profile: kimjaehee
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://192.168.0.5:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
     username: root
     password: smjj1418**
   jpa:
