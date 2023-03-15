@@ -42,10 +42,19 @@ spring:
     activate:
       on-profile: kimjaehee
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.0.5:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
-    username: root
-    password: 1234
+    hikari:
+      dbType: MYSQL
+      username: root
+      dbPort: 3306
+      dbIp: 192.168.0.5
+      password: 1234
+      jdbc-url: jdbc:mysql://192.168.0.5:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      connectionTimeout: 40000
+      serverTimezone: Asia/Seoul
+      auto-commit: true
+      maximumPoolSize: 5
+      maxLifetime: 35000
   jpa:
     show-sql: true
     hibernate:
