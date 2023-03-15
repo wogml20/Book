@@ -45,7 +45,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.0.5:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
     username: root
-    password: smjj1418**
+    password: 1234
   jpa:
     show-sql: true
     hibernate:
