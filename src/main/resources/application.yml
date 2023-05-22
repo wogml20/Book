@@ -16,7 +16,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/book?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul&allowPublicKeyRetrieval=true
     username: root
-    password: smjj1418**
+    password: 1234
   jpa:
     show-sql: true
     hibernate:
@@ -26,7 +26,20 @@ spring:
         format_sql: true
         default_batch_fetch_size: 1000
     database-platform: org.hibernate.dialect.MySQL8Dialect
-
+  output:
+    ansi:
+      enabled: always
+  mail:
+    host: smtp.naver.com
+    port: 465
+    username: rlawogml_18@naver.com
+    password: 262EPFVE1C9C
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.ssl.enable: true
+      mail.smtp.ssl.trust: smtp.naver.com
+      mail.smtp.starttls.enable: true
+    protocol: smtps
 server:
   port: 8080
 logging:

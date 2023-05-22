@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/loginLayout}">
+
+<th:block layout:fragment="css">
+  <style>
+    body {
+      text-align: center;
+    }
+
+    .content {
+      margin: 100px auto;
+      width: 500px;
+    }
+
+    .btn {
+      width: 500px;
+    }
+  </style>
+</th:block>
+
+<div layout:fragment="content">
+  <h1 class="mb-5" style="color: rgb(103,167,47);"><b>Book</b></h1>
+
+  <div th:if="${action} == 'id'">
+    <span th:text="${member.name} + '님의 아이디는 '"></span>
+    <b th:text="${member.userid}"></b> <span> 입니다.</span>
+    <br>
+    <span><a th:href="@{/members/find(action='id')}">/ 비밀번호 찾기 </a></span>
+  </div>
+
+  <div th:if="${action} == 'passwd'">
+    <p>입력한 이메일로 임시 비밀번호를 전송했습니다. 임시 비밀번호로 로그인 후 비밀번호를 변경해주세요.</p>
+  </div>
+
+
+
+  <button class="btn mt-3" style="background-color: rgb(103,167,47); color: white">로그인</button>
+
+</div>
+</html>

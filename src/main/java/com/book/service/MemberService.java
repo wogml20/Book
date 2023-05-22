@@ -47,4 +47,24 @@ public class MemberService implements UserDetailsService {
                 .roles(member.getRole().toString())
                 .build();
     }
+
+    public Member findMember(String name, String email) {
+        Member findMember = memberRepository.findByNameAndEmail(name, email);
+        return findMember;
+    }
+
+    public Member getPwdSearch(String userid, String email) {
+        Member findMember = memberRepository.findByUseridAndEmail(userid, email);
+        return findMember;
+    }
+    public void setPwdChange(String userid, String pwd){
+        Member member = memberRepository.findByUserid(userid);
+        if (member != null) {
+            member.setPassword(pwd);
+            memberRepository.save(member);
+            log.info("비밀번호가 성공적으로 변경되었습니다.");
+        } else {
+            log.info("사용자를 찾을 수 없습니다.");
+        }
+    }
 }
